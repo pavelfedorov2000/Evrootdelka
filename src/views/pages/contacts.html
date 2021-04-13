@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html')
+
+<body>
+
+    <div class="page contacts-page">
+        @@include('../../blocks/modules/sidebar/_sidebar.html')
+
+        <section class="section contacts">
+            @@include('../../blocks/modules/header/_header.html')
+            @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
+            <div class="contacts__header">
+                <nav class="breadcrumbs contacts__breadcrumbs breadcrumbs--black">
+                    <a class="breadcrumbs__item" href="index.html">Главная</a>
+                    <span class="breadcrumbs__item-divider">/</span>
+                    <span class="breadcrumbs__item">Контакты</span>
+                </nav>
+                <h1 class="page-title page__title section-title contacts__title">Контакты</h1>
+            </div>
+            <div class="contacts__content">
+                <div class="contacts__inner grid">
+                    <form action="#" class="contacts__item contacts__form order-form">
+                        <h4 class="title order-form__title contacts__form-title">Оставить заявку</h4>
+                        <fieldset class="order-form__fields contacts__form-fields">
+                            <input type="text" class="input order-form__input contacts__form-input" placeholder="Имя">
+                            <input type="tel" class="input order-form__input contacts__form-input"
+                                placeholder="Телефон">
+                            <input type="email" class="input order-form__input contacts__form-input"
+                                placeholder="E-mail">
+                            <textarea name="" id="" class="input order-form__input order-form__textarea contacts__form-input
+                                contacts__form-textarea" placeholder="Введите Ваше сообщение..."></textarea>
+                        </fieldset>
+                        <button class="button order-form__btn contacts__form-btn icon-arr-r">
+                            Отправить
+                        </button>
+                    </form>
+                    <div class="contacts__item contacts__gray-item">
+                        <h6 class="contacts__item-title">Телефоны</h6>
+                        <a class="contacts__item-descr" href="tel:+375296868866">+375 (29) 686-88-66</a>
+                        <a class="contacts__item-descr" href="tel:+375297675740">+375 (29) 767-57-40</a>
+                    </div>
+                    <div class="contacts__item contacts__gray-item">
+                        <h6 class="contacts__item-title">E-mail</h6>
+                        <a class="contacts__item-descr" href='mailto:Evrootdelka@tut.by'>Evrootdelka@tut.by</a>
+                    </div>
+                    <div class="contacts__item contacts__gray-item">
+                        <h6 class="contacts__item-title">Адрес</h6>
+                        <p class="contacts__item-descr">Минск, ул. Холмогорская, 65-14</p>
+                    </div>
+                    <div class="contacts__item contacts__gray-item">
+                        <h6 class="contacts__item-title">Режим работы</h6>
+                        <ul class="contacts__item-list">
+                            <li class="contacts__item-descr"><span>Пн - Пт</span><span>08:00 — 21:00</span></li>
+                            <li class="contacts__item-descr"><span>Сб</span><span>08:00 — 17:00</span></li>
+                            <li class="contacts__item-descr"><span>Вс</span><span>Выходной</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

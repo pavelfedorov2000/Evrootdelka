@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html')
+
+<body>
+
+    <div class="page">
+        @@include('../../blocks/modules/sidebar/_sidebar.html')
+
+        <section class="section reviews-page">
+            @@include('../../blocks/modules/header/_header.html')
+            @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
+
+            <nav class="breadcrumbs breadcrumbs--black">
+                <a class="breadcrumbs__item" href="index.html">Главная</a>
+                <span class="breadcrumbs__item-divider">/</span>
+                <span class="breadcrumbs__item">Отзывы</span>
+            </nav>
+
+            <div class="reviews-page__wrapper">
+                <div class="page__header reviews-page__header">
+                    <h1 class="page-title section-title reviews-page__title">Отзывы</h1>
+                    <button class="reviews-page__add-btn">
+                        Добавить отзыв
+                    </button>
+                </div>
+
+                <div class="reviews-page__cards grid">
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                    @@include('../../blocks/modules/reviews/_review-card.html')
+                </div>
+
+                <div class="reviews-page__more-cards">
+                    <div class="reviews-page__cards grid">
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                        @@include('../../blocks/modules/reviews/_review-card.html')
+                    </div>
+                </div>
+
+                <div class="button reviews-page__show-more more-reviews">
+                    Показать еще
+                    <span>Скрыть</span>
+                </div>
+            </div>
+
+            <div class="overlay">
+                @@include('../../blocks/modules/popups/add-review/_add-review.html')
+                @@include('../../blocks/modules/popups/review/_review-popup.html')
+            </div>
+        </section>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

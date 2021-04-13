@@ -1,0 +1,27 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    padding-top: 17px;
+    padding-left: 61px;
+    //padding-bottom: 42px;
+    color: #fff;
+
+    @media (max-width:991px) {
+        display: none;
+    }
+
+    &--black {
+        color: #000;
+    }
+
+    // .breadcrumbs__item
+
+    &__item {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    &__item-divider {
+        padding: 0 3px;
+    }
+}

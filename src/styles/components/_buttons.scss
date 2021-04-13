@@ -1,0 +1,16 @@
+.button {
+    position: relative;
+    background-color: $accent;
+    font-weight: 300;
+    padding: 12px 25px;
+    color: #000;
+    &:before {
+        font-size: 12px;
+        transition: 0.3s all;
+    }
+    &:hover {
+        &:before {
+            transform: translate(5px, -50%);
+        }
+    }
+}

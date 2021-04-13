@@ -1,0 +1,230 @@
+.services-page {
+    // .services-page__form-section
+
+    &__form-section {
+        padding-top: 47px;
+        padding-bottom: 115px;
+
+        @media (max-width: 767px) {
+            padding: 29px 0 33px;
+        }
+    }
+
+    // .services-page__form
+
+    &__form {
+        width: 730px;
+        @include column;
+        align-items: flex-end;
+
+        @media (max-width: 1600px) {
+            width: 50%;
+        }
+
+        @media (max-width: 1300px) {
+            width: 70%;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            align-items: flex-start;
+        }
+    }
+
+    &__form-col {
+        @media (max-width: 767px) {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    &__form-title {
+        margin-bottom: 32px;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+    }
+
+    // .services-page__form-input
+
+    &__form-input {
+        display: block;
+        width: 445px;
+        border: none;
+        background-color: $card-bg;
+        padding: 15px;
+        color: #c4c4c4;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    &__form-input + &__form-input {
+        margin-top: 11px;
+    }
+
+    // .services-page__form-textarea
+
+    &__form-textarea {
+        min-height: 115px;
+    }
+
+    // .services-page__form-btn
+
+    &__form-btn {
+        width: 100%;
+        @include flex-end;
+        padding-right: 102px;
+        margin-top: 15px;
+        &:before {
+            right: 57px;
+        }
+
+        @media (max-width: 767px) {
+            width: 197px;
+            align-self: flex-end;
+            padding-right: 20px;
+        }
+    }
+}
+
+.services {
+    position: relative;
+    padding: 60px 150px 160px 150px;
+
+    @media (max-width: 1600px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media (max-width: 991px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 20px;
+        padding-bottom: 66px;
+    }
+
+    &__content {
+        //width: 319px * 4 + 30px * 3;
+        margin: 0 auto;
+
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
+    }
+
+    // .services__title
+
+    &__title {
+        margin-bottom: 47px;
+
+        @media (max-width: 575px) {
+            margin-bottom: 17px;
+        }
+    }
+
+    // .sevices__cards
+
+    &__cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 44px;
+
+        @media (max-width: 1500px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 15px;
+        }
+
+        @media (max-width: 375px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        right: 0;
+        bottom: 63px;
+        width: 470px;
+        @include flex-end;
+        padding-right: 103px;
+        align-self: flex-end;
+        &:before {
+            right: 57px;
+            font-size: 12px;
+        }
+
+        @media (max-width: 575px) {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
+
+.service-card {
+    position: relative;
+    height: 148px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s transform;
+
+    &__descr {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.74);
+        backdrop-filter: blur(5px);
+        padding: 9px 5px 9px 13px;
+        color: #ffffff;
+
+        @media (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            padding: 6px;
+            font-size: 14px;
+            line-height: 16px;
+            min-height: 43px;
+        }
+
+        &:before {
+            font-size: 16px;
+            color: $accent;
+            right: 13px;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        @media (max-width: 575px) {
+            transform: none;
+        }
+
+        .service-card__descr:before {
+            visibility: visible;
+            opacity: 1;
+            @media (max-width: 575px) {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+}

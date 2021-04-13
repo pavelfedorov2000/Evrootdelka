@@ -1,0 +1,29 @@
+.review-popup {
+    display: none;
+    height: 438px;
+    overflow-y: auto;
+    padding: 23px 20px;
+    background-color: #fff;
+
+    @media(max-width: 575px) {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    // .review-popup__date
+
+    &__date {
+        margin-top: 5px;
+    }
+
+    // .review-popup__rating
+
+    &__rating {
+        margin-top: 26px;
+    }
+
+    // .review-popup__text
+
+    &__text {
+        margin: 22px 0 0;
+    }
+}

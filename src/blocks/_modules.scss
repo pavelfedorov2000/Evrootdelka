@@ -1,0 +1,41 @@
+// Common
+@import "modules/sidebar/sidebar";
+@import "modules/header/header";
+@import "modules/hamburger/hamburger";
+@import "modules/pagination/pagination";
+@import "modules/mobile-menu/mob-menu";
+@import "modules/projects/projects";
+@import "modules/footer/footer";
+@import "modules/order-form/order-form";
+@import "modules/prices/prices";
+
+// Home-page
+@import "modules/promo/promo";
+@import "modules/services/services";
+@import "modules/masters/masters";
+@import "modules/partners/partners";
+@import "modules/video-reviews/video-reviews";
+
+
+// Services-page
+@import "modules/service-categories/service-categories";
+@import "modules/works/works";
+
+// Contacts-page
+@import "modules/contacts/contacts";
+
+// Reviews-page
+@import "modules/reviews/reviews";
+
+// Typical-page
+@import "modules/typical/typical";
+@import "modules/work-examples/work-examples";
+
+// Articles-page, Article-page
+@import "modules/articles/articles";
+
+// About-page
+@import "modules/about/about";
+
+// Popups
+@import "modules/popups/popups";

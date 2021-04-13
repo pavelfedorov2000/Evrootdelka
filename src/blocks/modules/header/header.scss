@@ -1,0 +1,117 @@
+.header {
+
+    display: none;
+
+    @media (max-width:991px) {
+        position: fixed;
+        top: 0;
+        @include centerX;
+        z-index: 100;
+        width: 100%;
+        padding: 10px 20px;
+        @include flex;
+        align-items: center;
+        background-color: rgba(#000, .5);
+    }
+
+    // .header__logo
+
+    &__logo {
+        color: #fff;
+        margin: 11px 31px 24px 40px;
+
+        @media (max-width:991px) {
+            margin: 0;
+        }
+    }
+
+    // .header__logo-title
+
+    &__logo-title {
+        font-weight: 500;
+        margin-bottom: 29px;
+
+        @media (max-width:991px) {
+            margin: 0;
+            font-size: 14px;
+            line-height: 16px;
+            color: #fff;
+        }
+    }
+
+    // .header__logo-descr
+
+    &__logo-descr {
+        font-size: 24px;
+        line-height: 28px;
+
+        @media (max-width:991px) {
+            display: none;
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+        background-color: $accent;
+        padding: 20px 44px;
+
+        @media (max-width:991px) {
+            display: none;
+        }
+    }
+
+    // .header__menu-list
+
+    &__menu-list {
+        @media (max-width:991px) {
+            @include column;
+            align-items: flex-end;
+        }
+    }
+
+    &__menu-item {}
+
+    // .header__menu-item
+
+    &__menu-item+&__menu-item {
+        margin-top: 20px;
+
+        @media (max-width:991px) {
+            margin-top: 23px;
+        }
+    }
+
+    // .header__menu-link
+
+    &__menu-link {
+        font-weight: 300;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: #000;
+            transition: .3s ease;
+
+            @media (max-width:991px) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            &:after {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:991px) {
+            font-weight: 400;
+            color: #000;
+        }
+    }
+}

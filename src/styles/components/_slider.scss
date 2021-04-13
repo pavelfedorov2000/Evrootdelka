@@ -1,0 +1,85 @@
+.slider {
+    &__btn {
+        position: absolute;
+        z-index: 99;
+        background-color: transparent;
+        transition: 0.5s ease all;
+        &:before {
+            @include centerXY;
+        }
+    }
+}
+
+.slick-slide {
+    outline: none;
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    width: 35px;
+    height: 35px;
+    &:after {
+        font-size: 21px;
+    }
+
+    @media (max-width: 575px) {
+        bottom: 29px;
+    }
+}
+
+.swiper-button-prev {
+    margin-top: 0;
+
+    @media (max-width: 575px) {
+        left: 77px / 375px * 100%;
+    }
+
+    @media (max-width: 375px) {
+        left: 50px;
+    }
+}
+
+.swiper-button-next {
+    margin-top: 0;
+
+    @media (max-width: 575px) {
+        right: 77px / 375px * 100%;
+    }
+
+    @media (max-width: 375px) {
+        right: 50px;
+    }
+}
+
+.swiper-scrollbar {
+    position: relative;
+    width: 146px;
+    height: 3px;
+    background: #c4c4c4;
+    border-radius: 10px;
+    margin: 0 2px;
+}
+
+.swiper-scrollbar-drag {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 0;
+    background: $accent;
+    border-radius: 10px;
+    width: 26px !important;
+    height: 5px;
+}
+
+.swiper-pagination-fraction {
+    position: static;
+    font-size: 14px;
+    line-height: 16px;
+    color: #c4c4c4;
+}

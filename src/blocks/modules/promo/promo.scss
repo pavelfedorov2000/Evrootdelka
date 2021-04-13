@@ -1,0 +1,218 @@
+.promo {
+    background: $dark-gradient;
+    height: 100vh;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 29.6vh;
+    padding-bottom: 7.3vh;
+    padding-left: 130px;
+    padding-right: 170px;
+    @include column;
+
+    @media (max-width: 1500px) {
+        padding: 100px 50px;
+    }
+
+    @media (max-width: 1300px) {
+        background-position: 70%;
+    }
+
+    @media (max-width: 991px) {
+        position: relative;
+        padding: 153px 20px 177px 20px;
+        height: auto;
+    }
+
+    @media (max-width: 575px) {
+        background-position: 80%;
+    }
+
+    // .promo__content
+
+    &__content {
+        margin-bottom: 20.1vh;
+
+        @media (max-width: 1500px) {
+            margin-bottom: 100px;
+        }
+    }
+
+    // .promo__title
+
+    &__title {
+        font-size: 64px;
+        line-height: 75px;
+        margin-bottom: 54px;
+
+        @media (max-width: 1300px) {
+            font-size: 48px;
+            line-height: 59px;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 36px;
+            line-height: 42px;
+            margin-bottom: 20px;
+        }
+    }
+
+    // .promo__text
+
+    &__text {
+        max-width: 680px;
+        margin-bottom: 34px;
+
+        @media (max-width: 767px) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            padding: 8px 20px 14px;
+            font-size: 15px;
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+    }
+
+    // .promo__link
+
+    &__link {
+        display: inline-block;
+        width: 154px;
+        padding: 12px 31px;
+
+        @media (max-width: 767px) {
+            padding: 10px 24px;
+            width: 114px;
+            margin-bottom: 20.1vh;
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    &__slider-inner {
+        align-self: flex-end;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 767px) {
+            align-self: initial;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+        }
+    }
+
+    // .promo__slider
+
+    &__slider {
+        width: 415px;
+
+        @media (max-width: 575px) {
+            width: 308px;
+        }
+
+        @media (max-width: 375px) {
+            width: 270px;
+        }
+    }
+}
+
+.promo-slider {
+    // .promo-slider__item
+
+    &__item {
+        width: 415px;
+        min-height: 154px;
+        background: rgba(196, 196, 196, 0.4);
+        backdrop-filter: blur(15px);
+        padding: 15px 40px 15px 20px;
+        font-weight: 500;
+
+        @media (max-width: 575px) {
+            width: 308px;
+            min-height: 128px;
+            padding: 15px 40px 8px 18px;
+        }
+
+        @media (max-width: 375px) {
+            width: 270px;
+            padding-right: 20px;
+        }
+    }
+
+    // .promo-slider__item-title
+
+    &__item-title {
+        max-width: 297px;
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 5px;
+
+        @media (max-width: 575px) {
+            max-width: 100%;
+            margin-bottom: 1px;
+        }
+    }
+
+    // .promo-slider__item-date
+
+    &__item-date {
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(196, 196, 196, 0.6);
+        margin-bottom: 12px;
+
+        @media (max-width: 575px) {
+            font-size: 10px;
+            line-height: 12px;
+            margin-bottom: 4px;
+        }
+    }
+
+    // .promo-slider__item-text
+
+    &__item-text {
+        font-size: 14px;
+        line-height: 16px;
+
+        @media (max-width: 575px) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    &__btn {
+        &--prev {
+            display: none;
+        }
+
+        &--next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -29px;
+            width: 59px;
+            height: 59px;
+            background-color: $accent;
+            @include center;
+            &:before {
+                @include centerXY;
+                color: #000;
+                font-size: 13px;
+            }
+
+            @media (max-width: 575px) {
+                right: -27px;
+            }
+
+            @media (max-width: 375px) {
+                width: 50px;
+                height: 50px;
+                right: -20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.service-categories {
+    background-color: $dark-bg;
+    padding-right: 70px;
+    padding-bottom: 59px;
+    color: #fff;
+
+    @media (max-width: 1500px) {
+        padding-right: 30px;
+    }
+
+    @media (max-width: 991px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    // .service-categories__title
+
+    &__title {
+        margin: 42px 0 49px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 21px;
+        }
+    }
+
+    // .service-categories__inner
+
+    &__inner {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 150px);
+        grid-gap: 28px;
+        margin-left: 70px;
+
+        @media (max-width: 1500px) {
+            margin-left: 30px;
+            grid-gap: 20px;
+        }
+
+        @media (max-width: 991px) {
+            margin-left: 0;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 74px);
+            grid-row-gap: 14px;
+        }
+    }
+
+    // .service-categories__item
+
+    &__item {
+        width: 100%;
+        background-color: $card-bg;
+        @include center;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        transition: 0.3s all;
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        &:hover {
+            background-color: $accent;
+            color: #000;
+        }
+
+        // .service-categories__item--img
+
+        &--active {
+            background-color: $accent;
+            color: #000;
+        }
+    }
+
+    &__item+&__item {
+        margin-left: 0;
+    }
+
+    &__img-item {
+        grid-column: 2 / 4;
+        grid-row: 2 / 4;
+        background-color: transparent;
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__img {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &--active {
+            display: block;
+        }
+    }
+}

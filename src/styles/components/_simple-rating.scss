@@ -1,0 +1,17 @@
+.simple-rating {
+
+    &__item {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/icons/star.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (max-width:575px) {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}

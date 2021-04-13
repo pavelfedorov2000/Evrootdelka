@@ -1,0 +1,26 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: $sidebar;
+    height: 100vh;
+    background-color: $gray-bg;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    @media (max-width:991px) {
+        display: none;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .footer {
+        display: block;
+    }
+}

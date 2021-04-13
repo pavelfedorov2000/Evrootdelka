@@ -1,0 +1,115 @@
+.mobile-menu {
+
+    position: fixed;
+    top: 40px;
+    right: -100%;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(79.97% 294.82% at 5.18% 92.9%, #000000 0%, rgba(0, 0, 0, 0.757207) 64.58%, rgba(0, 0, 0, 0.760938) 93.75%);
+    transition: .5s ease;
+    overflow: auto;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__top {
+        justify-content: flex-end;
+    }
+
+    &__bottom-item {
+        width: 50%;
+    }
+
+    // .mobile-menu__socials
+
+    &__socials {
+        width: 30px;
+        @include column;
+        align-items: center;
+        margin-top: 56px;
+        margin-left: 46px;
+    }
+
+    &__social-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    // .mobile-menu__social-item
+
+    &__social-item+&__social-item {
+        margin-top: 32px;
+    }
+
+    // .mobile-menu__contacts
+
+    &__contacts {
+        padding: 47px 13px 35px 20px;
+        font-size: 16px;
+        line-height: 19px;
+        color: #fff;
+
+        @media (max-width:360px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    // .mobile-menu__contact-item
+
+    &__contact-item {
+        display: block;
+    }
+
+    &__contact-email {
+        margin-bottom: 10px;
+    }
+
+    &__contact-phone+&__contact-phone {
+        margin-top: 6px;
+    }
+
+    // .mobile-menu__info
+
+    &__info {
+        background-color: #fff;
+        padding: 31px 20px 35px 0;
+        color: #000;
+        font-size: 14px;
+        line-height: 16px;
+
+        @media (max-width:360px) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    // .mobile-menu__info-item
+
+    &__info-item {
+        font-weight: 400;
+        text-align: right;
+    }
+
+    &__info-item+&__info-item {
+        margin-top: 16px;
+    }
+
+    &--active {
+        @media(max-width: 991px) {
+            right: 0;
+        }
+    }
+
+    .header__menu {
+        @media (max-width:991px) {
+            width: 242px / 375px * 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 50px 46px;
+            margin-left: 57px;
+        }
+    }
+}
