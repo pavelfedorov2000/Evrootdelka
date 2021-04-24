@@ -32,10 +32,10 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin yellow-slider-btn {
-    width: 80px;
-    height: 80px;
-    border: 1px solid $accent;
+@mixin slider-btn($size, $border-color) {
+    width: $size;
+    height: $size;
+    border: 1px solid $border-color;
 }
 
 @mixin flex-end {

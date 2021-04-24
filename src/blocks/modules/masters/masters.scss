@@ -532,7 +532,7 @@
     &__btn {
         bottom: 0;
         right: 0;
-        @include yellow-slider-btn;
+        @include slider-btn(80px, $accent);
 
         &:before {
             font-size: 20px;
@@ -647,9 +647,7 @@
     &__slider-btn {
         position: relative;
         display: inline-block;
-        width: 38px;
-        height: 38px;
-        border: 1px solid #808080;
+        @include slider-btn(38px, #808080);
 
         &:before {
             color: #7e7e7e;

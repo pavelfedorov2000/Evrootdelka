@@ -13,7 +13,7 @@
         height: 638px;
         z-index: 90;
         background-size: contain;
-        background-image: url('../img/about_bg.png');
+        background-image: url(../img/about_bg.png);
 
         @media (max-width: 1500px) {
             display: none;
@@ -24,6 +24,7 @@
 
     &__header {
         margin-bottom: 104px;
+        padding-right: 65px;
 
         @media (max-width: 1200px) {
             flex-direction: column;
@@ -115,12 +116,14 @@
         position: absolute;
         right: 1px;
         bottom: 52px;
-        z-index: 100;
         width: 484px;
         @include flex-end;
         padding-right: 103px;
         &:before {
             right: 57px;
+            @media (max-width: 575px) {
+                right: 29px;
+            }
         }
 
         @media (max-width: 650px) {
@@ -128,6 +131,10 @@
             left: 0;
             right: 0;
             width: 100%;
+        }
+
+        @media (max-width: 575px) {
+            padding-right: 64px;
         }
     }
 }
@@ -156,9 +163,7 @@
     &__btn {
         bottom: 0;
         left: 0;
-        width: 38px;
-        height: 38px;
-        border: 1px solid $accent;
+        @include slider-btn(38px, $accent);
 
         &:before {
             color: $accent;

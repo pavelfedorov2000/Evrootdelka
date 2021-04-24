@@ -5,9 +5,9 @@
     overflow-x: hidden;
 
     &__title {
-        margin-top: 41px;
+        margin-top: 48px;
 
-        @media (max-width:991px) {
+        @media (max-width: 991px) {
             margin-top: 40px;
         }
     }
@@ -15,9 +15,9 @@
     &__header {
         display: flex;
         align-items: center;
-        margin-top: 41px;
+        margin-top: 48px;
 
-        @media (max-width:991px) {
+        @media (max-width: 991px) {
             margin-top: 40px;
         }
     }
@@ -27,7 +27,7 @@
     position: relative;
     width: calc(100% - 256px);
 
-    @media (max-width:991px) {
+    @media (max-width: 991px) {
         width: 100%;
     }
 }
@@ -46,20 +46,30 @@
     cursor: pointer;
 
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         @include centerY;
         left: calc(50% - 80px / 2);
         width: 80px;
         height: 81px;
-        background-image: url("../img/icons/video-player.svg");
+        background-image: url('../img/icons/video-player.svg');
     }
 }
 
-@import "../components/buttons";
-@import "../components/titles";
-@import "../components/tabs";
-@import "../components/list";
-@import "../components/simple-rating";
-@import "../components/slider";
-@import "../components/breadcrumbs";
+.social {
+    &__link {
+        &:hover {
+            &:before {
+                color: $accent;
+            }
+        }
+    }
+}
+
+@import '../components/buttons';
+@import '../components/titles';
+@import '../components/tabs';
+@import '../components/list';
+@import '../components/simple-rating';
+@import '../components/slider';
+@import '../components/breadcrumbs';

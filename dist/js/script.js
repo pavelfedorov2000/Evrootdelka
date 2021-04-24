@@ -192,7 +192,7 @@ $('.popup__close').on('click', function() {
 });
 
     $('.tab').on('click', function (e) {
-    e.preventDefault(); // отмена стандартного поведения браузера
+    e.preventDefault();
 
     $($(this).siblings()).removeClass('tab--active');
     $($(this).parent().siblings().children()).removeClass('tab--active');
@@ -201,7 +201,7 @@ $('.popup__close').on('click', function() {
     $(this).addClass('tab--active');
     $($(this).attr('href')).addClass('tabs__content--active');
 
-    $('.masters-slider').slick('setPosition'); // Инициализация слайдера
+    $('.masters-slider').slick('setPosition');
 });
 
     $('.open-video').magnificPopup({

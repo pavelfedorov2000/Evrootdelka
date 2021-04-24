@@ -9,6 +9,12 @@
     font-display: block;
 }
 
+[class^='icon-'],
+[class*=' icon-'] {
+    position: relative;
+    transition: 0.3s color;
+}
+
 [class^='icon-']::before,
 [class*=' icon-']::before {
     /* use !important to prevent issues with browser extensions that change fonts */
@@ -30,31 +36,28 @@
 .icon-vk:before {
     content: '\e904';
     color: #fff;
-    font-size: 15px;
-    top: 1px;
+    @include centerXY;
 }
 .icon-instagram:before {
     content: '\e905';
     color: #fff;
-    top: 0;
-    right: 0;
-    width: 16px;
-    height: 16px;
+    @include centerXY;
+    //width: 16px;
+    //height: 16px;
 }
 .icon-facebook:before {
     content: '\e906';
     color: #fff;
-    top: 0;
-    width: 8px;
-    height: 16px;
+    @include centerXY;
+    //width: 8px;
+    //height: 16px;
 }
 .icon-odnoklassniki:before {
     content: '\e907';
     color: #fff;
-    font-size: 16px;
-    top: 0;
-    width: 10px;
-    height: 16px;
+    @include centerXY;
+    //width: 10px;
+    //height: 16px;
 }
 .icon-arr-l-mini:before {
     content: '\e902';

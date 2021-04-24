@@ -401,7 +401,7 @@
 
     &__btn {
         bottom: 32px;
-        @include yellow-slider-btn;
+        @include slider-btn(80px, $accent);
 
         &:before {
             @include centerXY;
