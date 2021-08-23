@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../_head.html')
+@@include('../_head.html', {
+"title": "Проекты"
+})
 
 <body>
 
-    <div class="page">
+    <div class="wrapper">
         @@include('../../blocks/modules/sidebar/_sidebar.html')
 
-        <section class="section projects-page">
+        <main class="page projects-page">
             @@include('../../blocks/modules/header/_header.html')
             @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
 
@@ -50,33 +52,91 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-item__info">
-                        <div class="title project-item__title">
-                            Квартира по адресу ул. Неманская д.3
+                    @@include('../../blocks/modules/projects/_project-item.html', {
+                    "address": "ул. Неманская д.3",
+                    "type": "Новостройка",
+                    "square": "40 м²",
+                    "days": "25 дней",
+                    "task": "Ремонт кухни, спальни и гостевой комнаты",
+                    })
+                </div>
+                <div class="project-item">
+                    <div class="project-item__gallery">
+                        <div class="project-item__slider popup-gallery">
+                            <a href="img/projects/proj-2/main.jpg" class="project-item__slider-item">
+                                <img src="img/projects/proj-2/main.jpg" alt="">
+                            </a>
+                            <a href="img/projects/proj-1/main.jpg" class="project-item__slider-item">
+                                <img src="img/projects/proj-1/main.jpg" alt="">
+                            </a>
+                            <a href="img/projects/proj-3/main.jpg" class="project-item__slider-item">
+                                <img src="img/projects/proj-3/main.jpg" alt="">
+                            </a>
+                            <a href="img/projects/proj-1/main.jpg" class="project-item__slider-item">
+                                <img src="img/projects/proj-1/main.jpg" alt="">
+                            </a>
                         </div>
-                        <ul class="project-item__list">
-                            <li class="project-item__list-item">
-                                <b>Тип жилья:</b>
-                                <span>Новостройка</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Площадь:</b>
-                                <span>40 м²</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Срок<br>
-                                    выполнения:</b>
-                                <span>25 дней</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Задача:</b>
-                                <span>Ремонт кухни, спальни и гостевой комнаты</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="button project-item__btn icon-arr-r">
-                            Перейти
-                        </a>
+                        <div class="project-item__nav-slider">
+                            <div class="project-item__nav-slider-item">
+                                <img src="img/projects/proj-1/nav/nav-1.jpg" alt="">
+                            </div>
+                            <div class="project-item__nav-slider-item">
+                                <img src="img/projects/proj-1/nav/nav-2.jpg" alt="">
+                            </div>
+                            <div class="project-item__nav-slider-item">
+                                <img src="img/projects/proj-1/nav/nav-3.jpg" alt="">
+                            </div>
+                            <div class="project-item__nav-slider-item">
+                                <img src="img/projects/proj-1/nav/nav-4.jpg" alt="">
+                            </div>
+                        </div>
                     </div>
+                    @@include('../../blocks/modules/projects/_project-item.html', {
+                    "address": "ул. К.Туровского д.2",
+                    "type": "Новостройка",
+                    "square": "56 м²",
+                    "days": "40 дней",
+                    "task": "Ремонт квартиры под ключ",
+                    })
+                </div>
+                <div class="project-item">
+                    <div class="project-item__gallery">
+                        <div class="project-item__slider popup-gallery">
+                            <a href="img/projects/proj-3/main.jpg" class="project-item__slider-item">
+                                <img src="img/projects/proj-3/main.jpg" alt="">
+                            </a>
+                            <a href="img/projects/proj-1/main.jpg" class="project-item__slider-item">
+                                <img src="img/projects/proj-1/main.jpg" alt="">
+                            </a>
+                            <a href="img/projects/proj-2/main.jpg" class="project-item__slider-item">
+                                <img src="img/projects/proj-2/main.jpg" alt="">
+                            </a>
+                            <a href="img/projects/proj-1/main.jpg" class="project-item__slider-item">
+                                <img src="img/projects/proj-1/main.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="project-item__nav-slider">
+                            <div class="project-item__nav-slider-item">
+                                <img src="img/projects/proj-1/nav/nav-1.jpg" alt="">
+                            </div>
+                            <div class="project-item__nav-slider-item">
+                                <img src="img/projects/proj-1/nav/nav-2.jpg" alt="">
+                            </div>
+                            <div class="project-item__nav-slider-item">
+                                <img src="img/projects/proj-1/nav/nav-3.jpg" alt="">
+                            </div>
+                            <div class="project-item__nav-slider-item">
+                                <img src="img/projects/proj-1/nav/nav-4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    @@include('../../blocks/modules/projects/_project-item.html', {
+                    "address": "ул. Голодеда д.2",
+                    "type": "Новостройка",
+                    "square": "95 м²",
+                    "days": "2 месяца",
+                    "task": "Ремонт квартиры под ключ",
+                    })
                 </div>
                 <div class="project-item">
                     <div class="project-item__gallery">
@@ -109,173 +169,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-item__info">
-                        <div class="title project-item__title">
-                            Квартира по адресу ул. К.Туровского д.2
-                        </div>
-                        <ul class="project-item__list">
-                            <li class="project-item__list-item">
-                                <b>Тип жилья:</b>
-                                <span>Новостройка</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Площадь:</b>
-                                <span>56 м²</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Срок<br>
-                                    выполнения:</b>
-                                <span>40 дней</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Задача:</b>
-                                <span>Ремонт квартиры под ключ</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="button project-item__btn icon-arr-r">
-                            Перейти
-                        </a>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-item__gallery">
-                        <div class="project-item__slider popup-gallery">
-                            <a href="img/projects/proj-1/main.jpg" class="project-item__slider-item">
-                                <img src="img/projects/proj-1/main.jpg" alt="">
-                            </a>
-                            <a href="img/projects/proj-2/main.jpg" class="project-item__slider-item">
-                                <img src="img/projects/proj-2/main.jpg" alt="">
-                            </a>
-                            <a href="img/projects/proj-3/main.jpg" class="project-item__slider-item">
-                                <img src="img/projects/proj-3/main.jpg" alt="">
-                            </a>
-                            <a href="img/projects/proj-1/main.jpg" class="project-item__slider-item">
-                                <img src="img/projects/proj-1/main.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="project-item__nav-slider">
-                            <div class="project-item__nav-slider-item">
-                                <img src="img/projects/proj-1/nav/nav-1.jpg" alt="">
-                            </div>
-                            <div class="project-item__nav-slider-item">
-                                <img src="img/projects/proj-1/nav/nav-2.jpg" alt="">
-                            </div>
-                            <div class="project-item__nav-slider-item">
-                                <img src="img/projects/proj-1/nav/nav-3.jpg" alt="">
-                            </div>
-                            <div class="project-item__nav-slider-item">
-                                <img src="img/projects/proj-1/nav/nav-4.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item__info">
-                        <div class="title project-item__title">
-                            Квартира по адресу ул. Голодеда д.2
-                        </div>
-                        <ul class="project-item__list">
-                            <li class="project-item__list-item">
-                                <b>Тип жилья:</b>
-                                <span>Новостройка</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Площадь:</b>
-                                <span>95 м²</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Срок<br>
-                                    выполнения:</b>
-                                <span>2 месяца</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Задача:</b>
-                                <span>Ремонт квартиры под ключ</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="button project-item__btn icon-arr-r">
-                            Перейти
-                        </a>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-item__gallery">
-                        <div class="project-item__slider popup-gallery">
-                            <a href="img/projects/proj-1/main.jpg" class="project-item__slider-item">
-                                <img src="img/projects/proj-1/main.jpg" alt="">
-                            </a>
-                            <a href="img/projects/proj-2/main.jpg" class="project-item__slider-item">
-                                <img src="img/projects/proj-2/main.jpg" alt="">
-                            </a>
-                            <a href="img/projects/proj-3/main.jpg" class="project-item__slider-item">
-                                <img src="img/projects/proj-3/main.jpg" alt="">
-                            </a>
-                            <a href="img/projects/proj-1/main.jpg" class="project-item__slider-item">
-                                <img src="img/projects/proj-1/main.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="project-item__nav-slider">
-                            <div class="project-item__nav-slider-item">
-                                <img src="img/projects/proj-1/nav/nav-1.jpg" alt="">
-                            </div>
-                            <div class="project-item__nav-slider-item">
-                                <img src="img/projects/proj-1/nav/nav-2.jpg" alt="">
-                            </div>
-                            <div class="project-item__nav-slider-item">
-                                <img src="img/projects/proj-1/nav/nav-3.jpg" alt="">
-                            </div>
-                            <div class="project-item__nav-slider-item">
-                                <img src="img/projects/proj-1/nav/nav-4.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item__info">
-                        <div class="title project-item__title">
-                            Квартира по адресу ул. Неманская д.3
-                        </div>
-                        <ul class="project-item__list">
-                            <li class="project-item__list-item">
-                                <b>Тип жилья:</b>
-                                <span>Новостройка</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Площадь:</b>
-                                <span>40 м²</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Срок<br>
-                                    выполнения:</b>
-                                <span>25 дней</span>
-                            </li>
-                            <li class="project-item__list-item">
-                                <b>Задача:</b>
-                                <span>
-                                    Ремонт кухни, спальни и гостевой комнаты
-                                </span>
-                            </li>
-                        </ul>
-                        <a href="#" class="button project-item__btn icon-arr-r">
-                            Перейти
-                        </a>
-                    </div>
+                    @@include('../../blocks/modules/projects/_project-item.html', {
+                    "address": "ул. Неманская д.3",
+                    "type": "Новостройка",
+                    "square": "40 м²",
+                    "days": "25 дней",
+                    "task": "Ремонт кухни, спальни и гостевой комнаты",
+                    })
                 </div>
 
-                <nav class="pagination projects-page__pagination">
-                    <span class="pagination__item pagination__item--current">
-                        <span>1</span>
-                    </span>
-                    <a href="#" class="pagination__item">2</a>
-                    <a href="#" class="pagination__item">3</a>
-                    <a href="#" class="pagination__item">...</a>
-                    <a href="#" class="pagination__item">14</a>
-                    <div class="pagination__arrows">
-                        <a href="#" class="pagination__item pagination__arrow pagination__item--arrow"
-                            style="background-image: url(img/icons/arrows/pagination-arrow.svg);"></a>
-                        <a href="#" class="pagination__item pagination__arrow pagination__item--double-arrow"
-                            style="background-image: url(img/icons/arrows/pagination-double-arrow.svg);"></a>
-                    </div>
-                </nav>
+                @@include('../../blocks/modules/pagination/_pagination.html')
             </div>
-
-        </section>
+        </main>
 
         @@include('../../blocks/modules/footer/_footer.html')
 

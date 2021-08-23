@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../_head.html')
+@@include('../_head.html', {
+"title": "Цены"
+})
 
 <body>
 
-    <div class="page">
+    <div class="wrapper">
         @@include('../../blocks/modules/sidebar/_sidebar.html')
 
-        <section class="section prices-page">
+        <div class="page p-prices">
             @@include('../../blocks/modules/header/_header.html')
             @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
             <nav class="breadcrumbs">
                 <a class="breadcrumbs__item" href="index.html">Главная</a>
                 <span class="breadcrumbs__item">Цены</span>
             </nav>
-            <h1 class="page-title page__title section-title prices-page__title">Цены</h1>
-            <div class="prices-page__content">
-                <p class="prices-page__descr">
+            <h1 class="page-title page__title section-title p-prices__title">Цены</h1>
+            <div class="p-prices__content">
+                <div class="title p-prices__descr">
                     Ниже мы привели для вас цены на ремонт квартир:
-                </p>
-                <ul class="prices-page__descr-list">
+                </div>
+                <ul class="p-prices__descr-list">
                     <li>Расценки на ремонт квартир в Минске зависят от объемов и типа выполняемых работ.</li>
                     <li>Цены на ремонт загородных домов отличаются от цен на ремонт квартир в городе.</li>
                 </ul>
@@ -278,7 +280,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         @@include('../../blocks/modules/footer/_footer.html')
 

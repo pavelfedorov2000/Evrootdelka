@@ -1,27 +1,20 @@
 .promo {
-    background: $dark-gradient;
+    background-image: url(../img/promo_bg.jpg);
     height: 100vh;
     color: #fff;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 29.6vh;
-    padding-bottom: 7.3vh;
-    padding-left: 130px;
-    padding-right: 170px;
+    padding-top: 287 * 100vh / 1000;
+    padding-bottom: 70 * 100vh / 1000;
+    padding-left: 130 * 100vw / 1920;
+    padding-right: 115 * 100vw / 1920;
     @include column;
+    justify-content: space-between;
 
-    @media (max-width: 1500px) {
-        padding: 100px 50px;
-    }
-
-    @media (max-width: 1300px) {
-        background-position: 70%;
-    }
-
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         position: relative;
-        padding: 153px 20px 177px 20px;
+        padding: 153px 20px 177px;
         height: auto;
     }
 
@@ -29,29 +22,14 @@
         background-position: 80%;
     }
 
-    // .promo__content
-
-    &__content {
-        margin-bottom: 20.1vh;
-
-        @media (max-width: 1500px) {
-            margin-bottom: 100px;
-        }
-    }
-
     // .promo__title
 
     &__title {
-        font-size: 64px;
-        line-height: 75px;
-        margin-bottom: 54px;
+        font-size: 64 * 100vh / 1000;
+        line-height: 75 * 100vh / 1000;
+        margin-bottom: 54 * 100vh / 1000;
 
-        @media (max-width: 1300px) {
-            font-size: 48px;
-            line-height: 59px;
-        }
-
-        @media (max-width: 991px) {
+        @media (max-width: 992px) {
             font-size: 36px;
             line-height: 42px;
             margin-bottom: 20px;
@@ -61,8 +39,17 @@
     // .promo__text
 
     &__text {
-        max-width: 680px;
-        margin-bottom: 34px;
+        max-width: 680 * 100vh / 1000;
+        font-size: 18 * 100vh / 1000;
+        line-height: 21 * 100vh / 1000;
+        margin-bottom: 34 * 100vh / 1000;
+
+        @media(max-width: 992px) {
+            max-width: 680px;
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 34px;
+        }
 
         @media (max-width: 767px) {
             position: absolute;
@@ -74,6 +61,7 @@
             font-size: 15px;
             line-height: 18px;
             margin-bottom: 0;
+            max-width: 100%;
         }
     }
 
@@ -81,8 +69,20 @@
 
     &__link {
         display: inline-block;
-        width: 154px;
-        padding: 12px 31px;
+        //width: 154 * 100vh / 1000;
+        padding: 12 * 100vh / 1000 31 * 100vh / 1000;
+        transition: .3s all;
+
+        @media(max-width: 992px) {
+            padding: 12px 31px;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
 
         @media (max-width: 767px) {
             padding: 10px 24px;
@@ -92,28 +92,26 @@
         }
     }
 
-    &__slider-inner {
-        align-self: flex-end;
-        display: flex;
-        justify-content: flex-end;
-
-        @media (max-width: 767px) {
-            align-self: initial;
-            justify-content: flex-start;
-            margin-bottom: 30px;
-        }
-    }
-
     // .promo__slider
 
     &__slider {
-        width: 415px;
+        width: 415 * 100vh / 1000;
+        margin-right: 0;
+        margin-left: auto;
+        margin-top: 30px;
 
-        @media (max-width: 575px) {
-            width: 308px;
+        @media(max-width: 992px) {
+            width: 415px;
+            margin-right: 35px;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 767px) {
+            width: 308px;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        @media (max-width: 374px) {
             width: 270px;
         }
     }
@@ -123,20 +121,27 @@
     // .promo-slider__item
 
     &__item {
-        width: 415px;
-        min-height: 154px;
-        background: rgba(196, 196, 196, 0.4);
-        backdrop-filter: blur(15px);
-        padding: 15px 40px 15px 20px;
+        width: 415 * 100vh / 1000;
+        padding: 15 * 100vh / 1000 40 * 100vh / 1000 15 * 100vh / 1000 20 * 100vh / 1000;
         font-weight: 500;
 
-        @media (max-width: 575px) {
+        @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+            background: rgba(196, 196, 196, 0.4);
+            backdrop-filter: blur(15px);
+        }
+
+        @media(max-width: 992px) {
+            width: 415px;
+            padding: 15px 40px 15px 20px;
+        }
+
+        @media (max-width: 767px) {
             width: 308px;
             min-height: 128px;
             padding: 15px 40px 8px 18px;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 374px) {
             width: 270px;
             padding-right: 20px;
         }
@@ -145,12 +150,19 @@
     // .promo-slider__item-title
 
     &__item-title {
-        max-width: 297px;
-        font-size: 20px;
-        line-height: 23px;
-        margin-bottom: 5px;
+        max-width: 297 * 100vh / 1000;
+        font-size: 20 * 100vh / 1000;
+        line-height: 23 * 100vh / 1000;
+        margin-bottom: 5 * 100vh / 1000;
 
-        @media (max-width: 575px) {
+        @media(max-width: 992px) {
+            max-width: 297px;
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 767px) {
             max-width: 100%;
             margin-bottom: 1px;
         }
@@ -159,12 +171,18 @@
     // .promo-slider__item-date
 
     &__item-date {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 12 * 100vh / 1000;
+        line-height: 14 * 100vh / 1000;
         color: rgba(196, 196, 196, 0.6);
-        margin-bottom: 12px;
+        margin-bottom: 12 * 100vh / 1000;
 
-        @media (max-width: 575px) {
+        @media(max-width: 992px) {
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 767px) {
             font-size: 10px;
             line-height: 12px;
             margin-bottom: 4px;
@@ -174,10 +192,15 @@
     // .promo-slider__item-text
 
     &__item-text {
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 14 * 100vh / 1000;
+        line-height: 16 * 100vh / 1000;
 
-        @media (max-width: 575px) {
+        @media(max-width: 992px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        @media (max-width: 767px) {
             font-size: 12px;
             line-height: 14px;
         }
@@ -192,22 +215,33 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: -29px;
-            width: 59px;
-            height: 59px;
+            right: -29 * 100vh / 1000;
+            width: 59 * 100vh / 1000;
+            height: 59 * 100vh / 1000;
             background-color: $accent;
             @include center;
+
+            @media(max-width: 992px) {
+                right: -29px;
+                width: 59px;
+                height: 59px;
+            }
+
             &:before {
                 @include centerXY;
                 color: #000;
-                font-size: 13px;
+                font-size: 13 * 100vh / 1000;
+
+                @media(max-width: 992px) {
+                    font-size: 13px;
+                }
             }
 
-            @media (max-width: 575px) {
+            @media (max-width: 767px) {
                 right: -27px;
             }
 
-            @media (max-width: 375px) {
+            @media (max-width: 374px) {
                 width: 50px;
                 height: 50px;
                 right: -20px;

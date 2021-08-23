@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../_head.html')
+@@include('../_head.html', {
+"title": "Мастера"
+})
 
 <body>
 
-    <div class="page">
+    <div class="wrapper">
         @@include('../../blocks/modules/sidebar/_sidebar.html')
 
-        <section class="section masters-page">
+        <div class="page masters-page">
             @@include('../../blocks/modules/header/_header.html')
             @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
             <nav class="breadcrumbs">
@@ -44,643 +46,473 @@
                 <input type="text" class="masters-page__search-input" placeholder="Выберите область...">
             </div>
 
-            <div id="masters-tab-1" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-4.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Денис Пасека</div>
-                        <div class="master__descr master__category">
-                            Прораб<br>
-                            Строительство домов
-                        </div>
-                        <a href="tel:+375447690010" class="master__descr master__phone">+375 (44) 769-00-10</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-5.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Наталья Хотулева</div>
-                        <div class="master__descr master__category">Дизайнер</div>
-                        <a href="tel:" class="master__descr master__phone"></a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-6.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Егор</div>
-                        <div class="master__descr master__category">Электрик</div>
-                        <a href="tel:+375296800982" class="master__descr master__phone">+375 (29) 680-09-82</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-1" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-1.jpg",
+                "name": "Валентин Улановский",
+                "category": "Инженер-электрик",
+                "phone": "+375 (29) 884-07-34"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-3.jpg",
+                "name": "Анатолий Буяльский",
+                "category": "Электрик",
+                "phone": "+375 (29) 102-98-97"
+                })
             </div>
-            <div id="masters-tab-2" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-12.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Иван Сысоев</div>
-                        <div class="master__descr master__category">Стяжечник</div>
-                        <a href="tel:+375447544410" class="master__descr master__phone">+375 (44) 754-44-10</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-13.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Игорь Карнилович</div>
-                        <div class="master__descr master__category">Отделка </div>
-                        <a href="tel:+375296618596" class="master__descr master__phone">+375 (29) 661-85-96</a>
-                        <a href="tel:+375297697059" class="master__descr master__phone">+375 (29) 769-70-59</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-14.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Виктор Апанасович</div>
-                        <div class="master__descr master__category">Плиточник</div>
-                        <a href="tel:+375291252993" class="master__descr master__phone">+375 (29) 125-29-93</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-15.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Юрий Грек</div>
-                        <div class="master__descr master__category">Отделка</div>
-                        <a href="tel:+375291518467" class="master__descr master__phone">+375 (29) 151-84-67</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-2" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-1.jpg",
+                "name": "Валентин Улановский",
+                "category": "Инженер-электрик",
+                "phone": "+375 (29) 884-07-34"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-3.jpg",
+                "name": "Анатолий Буяльский",
+                "category": "Электрик",
+                "phone": "+375 (29) 102-98-97"
+                })
             </div>
-            <div id="masters-tab-3" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-10.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Алексей Макаров</div>
-                        <div class="master__descr master__category">Инженер-электрик</div>
-                        <a href="tel:+375447853109" class="master__descr master__phone">+375 (44) 785-31-09</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-11.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Евгений Даутян</div>
-                        <div class="master__descr master__category">Отделка</div>
-                        <a href="tel:+375293275978" class="master__descr master__phone">+375 (29) 327-59-78</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-12.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Иван Сысоев</div>
-                        <div class="master__descr master__category">Стяжечник</div>
-                        <a href="tel:+375447544410" class="master__descr master__phone">+375 (44) 754-44-10</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-3" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-4.jpg",
+                "name": "Денис Пасека",
+                "category": "Прораб",
+                "phone": "+375 (44) 769-00-10"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-5.jpg",
+                "name": "Наталья Хотулева",
+                "category": "Дизайнер",
+                "phone": ""
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-6.jpg",
+                "name": "Егор",
+                "category": "Электрик",
+                "phone": "+375 (29) 680-09-82"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
             </div>
-            <div id="masters-tab-4" class="tabs__content masters__cards grid tabs__content--active">
-                <div class="masters__card master">
-                    <img src="img/masters/master-1.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Валентин Улановский</div>
-                        <div class="master__descr master__category">
-                            Электромонтаж<br>
-                            Инженер-электрик
-                        </div>
-                        <a href="tel:+375298840734" class="master__descr master__phone">+375 (29) 884-07-34</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-2.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Вероника Зазнова</div>
-                        <div class="master__descr master__category">Дизайнер</div>
-                        <a href="tel:+375447144087" class="master__descr master__phone">+375 (44) 714-40-87</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-3.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Анатолий Буяльский</div>
-                        <div class="master__descr master__category">Электрик</div>
-                        <a href="tel:+375291029897" class="master__descr master__phone">+375 (29) 102-98-97</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-4.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Денис Пасека</div>
-                        <div class="master__descr master__category">
-                            Прораб<br>
-                            Строительство домов
-                        </div>
-                        <a href="tel:+375447690010" class="master__descr master__phone">+375 (44) 769-00-10</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-5.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Наталья Хотулева</div>
-                        <div class="master__descr master__category">Дизайнер</div>
-                        <a href="tel:" class="master__descr master__phone"></a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-6.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Егор</div>
-                        <div class="master__descr master__category">Электрик</div>
-                        <a href="tel:+375296800982" class="master__descr master__phone">+375 (29) 680-09-82</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-8.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Андрей Даутян</div>
-                        <div class="master__descr master__category">Отделка</div>
-                        <a href="tel:+375293917028" class="master__descr master__phone">+375 (29) 391-70-28</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-9.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Андрей Мишин</div>
-                        <div class="master__descr master__category">Сантехник</div>
-                        <a href="tel:+375297511205" class="master__descr master__phone">+375 (29) 751-12-05</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-10.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Алексей Макаров</div>
-                        <div class="master__descr master__category">Инженер-электрик</div>
-                        <a href="tel:+375447853109" class="master__descr master__phone">+375 (44) 785-31-09</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-11.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Евгений Даутян</div>
-                        <div class="master__descr master__category">Отделка</div>
-                        <a href="tel:+375293275978" class="master__descr master__phone">+375 (29) 327-59-78</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-12.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Иван Сысоев</div>
-                        <div class="master__descr master__category">Стяжечник</div>
-                        <a href="tel:+375447544410" class="master__descr master__phone">+375 (44) 754-44-10</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-13.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Игорь Карнилович</div>
-                        <div class="master__descr master__category">Отделка </div>
-                        <a href="tel:+375296618596" class="master__descr master__phone">+375 (29) 661-85-96</a>
-                        <a href="tel:+375297697059" class="master__descr master__phone">+375 (29) 769-70-59</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-14.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Виктор Апанасович</div>
-                        <div class="master__descr master__category">Плиточник</div>
-                        <a href="tel:+375291252993" class="master__descr master__phone">+375 (29) 125-29-93</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-15.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Юрий Грек</div>
-                        <div class="master__descr master__category">Отделка</div>
-                        <a href="tel:+375291518467" class="master__descr master__phone">+375 (29) 151-84-67</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-4" class="tabs-content masters__cards grid col-3 tabs-content--active">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-1.jpg",
+                "name": "Валентин Улановский",
+                "category": "Инженер-электрик",
+                "phone": "+375 (29) 884-07-34"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-3.jpg",
+                "name": "Анатолий Буяльский",
+                "category": "Электрик",
+                "phone": "+375 (29) 102-98-97"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-4.jpg",
+                "name": "Денис Пасека",
+                "category": "Прораб",
+                "phone": "+375 (44) 769-00-10"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-5.jpg",
+                "name": "Наталья Хотулева",
+                "category": "Дизайнер",
+                "phone": ""
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-6.jpg",
+                "name": "Егор",
+                "category": "Электрик",
+                "phone": "+375 (29) 680-09-82"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-10.jpg",
+                "name": "Алексей Макаров",
+                "category": "Инженер-электрик",
+                "phone": "+375 (44) 785-31-09"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-11.jpg",
+                "name": "Евгений Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 327-59-78"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-12.jpg",
+                "name": "Иван Сысоев",
+                "category": "Стяжечник",
+                "phone": "+375 (44) 754-44-10"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-13.jpg",
+                "name": "Игорь Карнилович",
+                "category": "Отделка",
+                "phone": "+375 (29) 661-85-96"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-14.jpg",
+                "name": "Виктор Апанасович",
+                "category": "Плиточник",
+                "phone": "+375 (29) 125-29-93"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-15.jpg",
+                "name": "Юрий Грек",
+                "category": "Отделка",
+                "phone": "+375 (29) 151-84-67"
+                })
             </div>
-            <div id="masters-tab-5" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-1.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Валентин Улановский</div>
-                        <div class="master__descr master__category">
-                            Электромонтаж<br>
-                            Инженер-электрик
-                        </div>
-                        <a href="tel:+375298840734" class="master__descr master__phone">+375 (29) 884-07-34</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-6.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Егор</div>
-                        <div class="master__descr master__category">Электрик</div>
-                        <a href="tel:+375296800982" class="master__descr master__phone">+375 (29) 680-09-82</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-9.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Андрей Мишин</div>
-                        <div class="master__descr master__category">Сантехник</div>
-                        <a href="tel:+375297511205" class="master__descr master__phone">+375 (29) 751-12-05</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-5" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-10.jpg",
+                "name": "Алексей Макаров",
+                "category": "Инженер-электрик",
+                "phone": "+375 (44) 785-31-09"
+                })
             </div>
-            <div id="masters-tab-6" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-8.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Андрей Даутян</div>
-                        <div class="master__descr master__category">Отделка</div>
-                        <a href="tel:+375293917028" class="master__descr master__phone">+375 (29) 391-70-28</a><a
-                            href="#" class="button master__btn"><span class="button__inner">Подробнее</span></a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-9.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Андрей Мишин</div>
-                        <div class="master__descr master__category">Сантехник</div>
-                        <a href="tel:+375297511205" class="master__descr master__phone">+375 (29) 751-12-05</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-10.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Алексей Макаров</div>
-                        <div class="master__descr master__category">Инженер-электрик</div>
-                        <a href="tel:+375447853109" class="master__descr master__phone">+375 (44) 785-31-09</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-11.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Евгений Даутян</div>
-                        <div class="master__descr master__category">Отделка</div>
-                        <a href="tel:+375293275978" class="master__descr master__phone">+375 (29) 327-59-78</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-12.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Иван Сысоев</div>
-                        <div class="master__descr master__category">Стяжечник</div>
-                        <a href="tel:+375447544410" class="master__descr master__phone">+375 (44) 754-44-10</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-13.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Игорь Карнилович</div>
-                        <div class="master__descr master__category">Отделка </div>
-                        <a href="tel:+375296618596" class="master__descr master__phone">+375 (29) 661-85-96</a>
-                        <a href="tel:+375297697059" class="master__descr master__phone">+375 (29) 769-70-59</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-14.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Виктор Апанасович</div>
-                        <div class="master__descr master__category">Плиточник</div>
-                        <a href="tel:+375291252993" class="master__descr master__phone">+375 (29) 125-29-93</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
-                <div class="masters__card master">
-                    <img src="img/masters/master-15.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Юрий Грек</div>
-                        <div class="master__descr master__category">Отделка</div>
-                        <a href="tel:+375291518467" class="master__descr master__phone">+375 (29) 151-84-67</a>
-                        <a href="#" class="button master__btn">
-                            <span class="button__inner">Подробнее</span>
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-6" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-6.jpg",
+                "name": "Егор",
+                "category": "Электрик",
+                "phone": "+375 (29) 680-09-82"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-10.jpg",
+                "name": "Алексей Макаров",
+                "category": "Инженер-электрик",
+                "phone": "+375 (44) 785-31-09"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-11.jpg",
+                "name": "Евгений Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 327-59-78"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-12.jpg",
+                "name": "Иван Сысоев",
+                "category": "Стяжечник",
+                "phone": "+375 (44) 754-44-10"
+                })
             </div>
-            <div id="masters-tab-6" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-7" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-5.jpg",
+                "name": "Наталья Хотулева",
+                "category": "Дизайнер",
+                "phone": ""
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-6.jpg",
+                "name": "Егор",
+                "category": "Электрик",
+                "phone": "+375 (29) 680-09-82"
+                })
             </div>
-            <div id="masters-tab-7" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-8" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
             </div>
-            <div id="masters-tab-8" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-9" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
             </div>
-            <div id="masters-tab-9" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-10" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
             </div>
-            <div id="masters-tab-10" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-11" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
             </div>
-            <div id="masters-tab-11" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-12" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
             </div>
-            <div id="masters-tab-12" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-13" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
             </div>
-            <div id="masters-tab-13" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-14" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
             </div>
-            <div id="masters-tab-14" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-15" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
             </div>
-            <div id="masters-tab-15" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-16" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
             </div>
-            <div id="masters-tab-16" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-17" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
             </div>
-            <div id="masters-tab-17" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-18" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-7.jpg",
+                "name": "Илья Гриневич",
+                "category": "Строительство",
+                "phone": "+375 (29) 125-64-23"
+                })
             </div>
-            <div id="masters-tab-18" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-19" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
             </div>
-            <div id="masters-tab-19" class="tabs__content masters__cards grid">
-                <div class="masters__card master">
-                    <img src="img/masters/master-7.jpg" alt="" class="master__photo">
-                    <div class="master__info">
-                        <div class="master__name">Илья Гриневич</div>
-                        <div class="master__descr master__category">Строительство</div>
-                        <a href="tel:+375291256423" class="master__descr master__phone">+375 (29) 125-64-23</a>
-                        <a href="#" class="button master__btn icon-arr-r">
-                            Подробнее
-                        </a>
-                    </div>
-                </div>
+            <div id="masters-tab-20" class="tabs-content masters__cards grid col-3">
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-2.jpg",
+                "name": "Вероника Зазнова",
+                "category": "Дизайнер",
+                "phone": "+375 (44) 714-40-87"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-8.jpg",
+                "name": "Андрей Даутян",
+                "category": "Отделка",
+                "phone": "+375 (29) 391-70-28"
+                })
+                @@include('../../blocks/modules/masters/_master-card.html', {
+                "photo": "img/masters/master-9.jpg",
+                "name": "Андрей Мишин",
+                "category": "Сантехник",
+                "phone": "+375 (29) 751-12-05"
+                })
             </div>
-        </section>
+        </div>
 
         @@include('../../blocks/modules/footer/_footer.html')
     </div>

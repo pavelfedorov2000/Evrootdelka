@@ -2,6 +2,7 @@ $('.projects-slider').slick({
     slidesToScroll: 1,
     prevArrow: '<button class="slider__btn projects-slider__btn projects-slider__btn--prev icon-arr-l"></button>',
     nextArrow: '<button class="slider__btn projects-slider__btn projects-slider__btn--next icon-arr-r"></button>',
+    appendArrows: $('.projects__slider-arrows'),
     variableWidth: true,
     responsive: [
         {

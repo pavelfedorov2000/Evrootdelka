@@ -1,16 +1,16 @@
 .breadcrumbs {
     display: flex;
     align-items: center;
-    padding-top: 17px;
-    padding-left: 61px;
-    color: #000;
+    padding-top: 17 * 100vw / 1920;
+    padding-left: 61 * 100vw / 1920;
 
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         display: none;
     }
 
     &--white {
         color: #fff;
+
         .breadcrumbs__item:after {
             color: #fff;
         }
@@ -21,28 +21,29 @@
     &__item {
         position: relative;
         display: inline-block;
-        padding-right: 8px;
-        font-size: 12px;
-        line-height: 14px;
+        padding-right: 8 * 100vw / 1920;
+        font-size: 12 * 100vw / 1920;
+        line-height: 14 * 100vw / 1920;
+
         &:after {
             content: '/';
             position: absolute;
             @include centerY;
             right: 0;
-            font-size: 12px;
-            line-height: 14px;
-            color: #000;
+            font-size: 12 * 100vw / 1920;
+            line-height: 14 * 100vw / 1920;
         }
+
         &:last-child:after {
             display: none;
         }
     }
 
-    &__item + &__item {
-        padding-left: 3px;
+    &__item+&__item {
+        padding-left: 3 * 100vw / 1920;
     }
 
     &__item-divider {
-        padding: 0 3px;
+        padding: 0 3 * 100vw / 1920;
     }
 }

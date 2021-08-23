@@ -32,13 +32,13 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
 @mixin slider-btn($size, $border-color) {
     width: $size;
     height: $size;
     border: 1px solid $border-color;
-}
-
-@mixin flex-end {
-    display: flex;
-    justify-content: flex-end;
 }

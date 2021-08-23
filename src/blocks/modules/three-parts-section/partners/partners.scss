@@ -1,0 +1,37 @@
+.partners {
+    background-color: $accent;
+    padding: 60 * 100vw / 1920 63 * 100vw / 1920;
+
+    @media (max-width: 992px) {
+        padding: 30px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 20px 20px 45px;
+    }
+
+    // .partners__title
+
+    &__title {
+        text-align: center;
+        margin-bottom: 56 * 100vw / 1920;
+
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 575px) {
+            text-align: left;
+        }
+    }
+
+    // .partners__items
+
+    &__items {
+        grid-gap: 60 * 100vw / 1920 40 * 100vw / 1920;
+    }
+
+    &__item {
+        @include center;
+    }
+}

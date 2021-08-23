@@ -1,361 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../_head.html')
+@@include('../_head.html', {
+"title": "Услуги"
+})
 
 <body>
 
-    <div class="page">
+    <div class="wrapper">
         @@include('../../blocks/modules/sidebar/_sidebar.html')
 
-        @@include('../../blocks/modules/service-categories/_service-categories.html')
+        <main class="page services-page">
+            @@include('../../blocks/modules/header/_header.html')
+            @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
+            <nav class="breadcrumbs breadcrumbs--white">
+                <a class="breadcrumbs__item" href="index.html">Главная</a>
+                <span class="breadcrumbs__item">Услуги</span>
+            </nav>
+            <h1 class="page-title page__title section-title services-page__title">
+                Услуги
+            </h1>
 
-        <section class="section works">
-            <div class="works__content">
-                <h4 class="title works__title">
-                    Последовательность выполнения работ, правильный ремонт квартир
-                </h4>
-                <p class="works__text">
-                    Работы по ремонту квартир можно разделить на два основных этапа: «черновой» и «чистовой». Ремонт
-                    квартир
-                    у нас осуществляется узкоспециализированными мастерами, но согласовано между собой. Соблюдение
-                    этапов
-                    очень важно т.к. их нарушение, как правило удорожает стоимость и ухудшает качество.
-                </p>
+            @@include('../../blocks/modules/service-categories/_service-categories.html')
+
+            @@include('../../blocks/modules/works/_works.html')
+
+            <div class="section services-page__form-section">
+                <form action="#" class="services-page__form">
+                    <div class="services-page__form-body">
+                        <h4 class="title services-page__form-title">
+                            Оставить заявку
+                        </h4>
+                        <div class="services-page__form-fields">
+                            <input class="services-page__form-input" placeholder="Имя">
+                            <input class="services-page__form-input" type="tel" placeholder="Телефон">
+                            <input class="services-page__form-input" type="email" placeholder="E-mail">
+                            <textarea class="services-page__form-input services-page__form-textarea"
+                                placeholder="Введите Ваше сообщение..."></textarea>
+                        </div>
+                    </div>
+                    <button class="button services-page__form-btn icon-arr-r" type="submit">
+                        Отправить
+                    </button>
+                </form>
             </div>
-            <div class="works__slider works-slider swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="works-slider__item swiper-slide">
-                        <div class="works-slider__item-img">
-                            <img src="img/work-process.jpg" alt="">
-                        </div>
-                        <div class="works-slider__item-content">
-                            <h5 class="works-slider__item-title">
-                                Демонтажные работы
-                            </h5>
-                            <p class="works-slider__item-text">
-                                Включают в себя демонтаж стен, сбивка сомнительной штукатурки, демонтаж стяжки, демонтаж
-                                старой сантехники и электрики, переустановка окон по геометрии). Выполняется подсобными
-                                рабочими.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="works-slider__controls">
-                    <div class="swiper-pagination works-slider__counter"></div>
-                    <div class="slider-controls">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-scrollbar"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section services-page__form-section">
-            <form action="#" class="services-page__form">
-                <div class="services-page__form-col">
-                    <h4 class="title services-page__form-title">
-                        Оставить заявку
-                    </h4>
-                    <fieldset class="services-page__form-fields">
-                        <input type="text" class="services-page__form-input" placeholder="Имя">
-                        <input type="tel" class="services-page__form-input" placeholder="Телефон">
-                        <input type="email" class="services-page__form-input" placeholder="E-mail">
-                        <textarea name="" id="" class="services-page__form-input services-page__form-textarea"
-                            placeholder="Введите Ваше сообщение..."></textarea>
-                    </fieldset>
-                </div>
-                <button class="button services-page__form-btn icon-arr-r" type="submit">
-                    Отправить
-                </button>
-            </form>
-        </section>
+        </main>
 
         @@include('../../blocks/modules/footer/_footer.html')
 

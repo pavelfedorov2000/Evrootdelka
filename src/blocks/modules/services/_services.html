@@ -1,39 +1,39 @@
 <section class="section services">
     <div class="services__content">
         <h2 class="section-title services__title">Услуги</h2>
-        <div class="services__cards grid">
-            <a href="typical.html" class="services__card service-card"
-                style="background-image: url(img/services/services_img-1.jpg);">
-                <div class="service-card__descr icon-arr-r">Работы по гипсокартону</div>
-            </a>
-            <a href="typical.html" class="services__card service-card"
-                style="background-image: url(img/services/services_img-2.jpg);">
-                <div class="service-card__descr icon-arr-r">Покраска потолка и стен</div>
-            </a>
-            <a href="typical.html" class="services__card service-card"
-                style="background-image: url(img/services/services_img-3.jpg);">
-                <div class="service-card__descr icon-arr-r">Электрика</div>
-            </a>
-            <a href="typical.html" class="services__card service-card"
-                style="background-image: url(img/services/services_img-4.jpg);">
-                <div class="service-card__descr icon-arr-r">Перегородки из гипсокартона</div>
-            </a>
-            <a href="typical.html" class="services__card service-card"
-                style="background-image: url(img/services/services_img-5.jpg);">
-                <div class="service-card__descr icon-arr-r">Сантехника</div>
-            </a>
-            <a href="typical.html" class="services__card service-card"
-                style="background-image: url(img/services/services_img-6.jpg);">
-                <div class="service-card__descr icon-arr-r">Поклейка обоев</div>
-            </a>
-            <a href="typical.html" class="services__card service-card"
-                style="background-image: url(img/services/services_img-7.jpg);">
-                <div class="service-card__descr icon-arr-r">Штукатурка стен</div>
-            </a>
-            <a href="typical.html" class="services__card service-card"
-                style="background-image: url(img/services/services_img-8.jpg);">
-                <div class="service-card__descr icon-arr-r">Монтаж натяжных потолков</div>
-            </a>
+        <div class="services__cards grid col-4">
+            @@include('./_service-card.html', {
+            "num": "1",
+            "title": "Работы по гипсокартону"
+            })
+            @@include('./_service-card.html', {
+            "num": "2",
+            "title": "Покраска потолка и стен"
+            })
+            @@include('./_service-card.html', {
+            "num": "3",
+            "title": "Электрика"
+            })
+            @@include('./_service-card.html', {
+            "num": "4",
+            "title": "Перегородки из гипсокартона"
+            })
+            @@include('./_service-card.html', {
+            "num": "5",
+            "title": "Сантехника"
+            })
+            @@include('./_service-card.html', {
+            "num": "6",
+            "title": "Поклейка обоев"
+            })
+            @@include('./_service-card.html', {
+            "num": "7",
+            "title": "Штукатурка стен"
+            })
+            @@include('./_service-card.html', {
+            "num": "8",
+            "title": "Монтаж натяжных потолков"
+            })
         </div>
     </div>
     <a href="services.html" class="button services__link icon-arr-r">

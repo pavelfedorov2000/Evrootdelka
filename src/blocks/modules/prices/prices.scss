@@ -1,16 +1,7 @@
 .prices {
-    padding: 96px 39px 80px 94px;
+    padding: 96 * 100vw / 1920 39 * 100vw / 1920 80 * 100vw / 1920 94 * 100vw / 1920;
 
-    @media (max-width: 1800px) {
-        padding-left: 70px;
-    }
-
-    @media (max-width: 1200px) {
-        padding-top: 70px;
-        padding-left: 30px;
-    }
-
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
         padding-top: 50px;
         padding-left: 20px;
         padding-right: 20px;
@@ -28,14 +19,14 @@
     // .prices__inner
 
     &__inner {
-        @include flex;
-        margin-top: 38px;
+        margin-top: 38 * 100vw / 1920;
 
-        @media (max-width: 1700px) {
-            flex-direction: column;
+        @media(min-width: 992px) {
+            @include flex;
+            align-items: flex-end;
         }
 
-        @media (max-width: 991px) {
+        @media (max-width: 992px) {
             margin-top: 22px;
         }
     }
@@ -44,28 +35,26 @@
 
     &__content {
         @include column;
-        max-width: 597px;
-        padding-top: 9px;
+        width: 597 * 100vw / 1920;
 
-        @media (max-width: 1800px) {
-            max-width: 35%;
-        }
-
-        @media (max-width: 1700px) {
-            max-width: 100%;
-            margin-bottom: 30px;
+        @media(max-width: 992px) {
+            width: 100%;
         }
     }
 
     &__text {
-        p {
-            max-width: 554px / 597px * 100%;
+        max-width: 554 * 100vw / 1920;
 
-            @media (max-width: 767px) {
-                max-width: 100%;
-                font-size: 16px;
-                line-height: 19px;
-            }
+        @media (max-width: 992px) {
+            max-width: 100%;
+        }
+
+        @media(max-width: 767px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        p {
 
             &:last-child {
                 @media (max-width: 575px) {
@@ -74,8 +63,12 @@
             }
         }
 
-        p + p {
-            margin-top: 22px;
+        p+p {
+            margin-top: 22 * 100vw / 1920;
+
+            @media(max-width: 992px) {
+                margin-top: 20px;
+            }
         }
     }
 
@@ -83,19 +76,25 @@
 
     &__link {
         display: inline-block;
-        width: 200px;
-        margin-top: 20px;
+        width: 200 * 100vw / 1920;
+        margin-top: 20 * 100vw / 1920;
         align-self: flex-end;
 
+        @media(max-width: 992px) {
+            width: 200px;
+            margin-top: 20px;
+        }
+
         &:before {
-            right: 33px;
+            right: 33 * 100vw / 1920;
+
+            @media(max-width: 992px) {
+                right: 33px;
+            }
+
             @media (max-width: 575px) {
                 right: 29px;
             }
-        }
-
-        @media (max-width: 1700px) {
-            align-self: flex-start;
         }
 
         @media (max-width: 575px) {
@@ -121,23 +120,12 @@
     // .prices__cards
 
     &__cards {
-        width: 236px * 3 + 40px * 2;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 40px;
-        grid-row-gap: 34px;
+        width: 788 * 100vw / 1920;
+        grid-gap: 34 * 100vw / 1920 40 * 100vw / 1920;
 
-        @media (max-width: 1700px) {
+        @media (max-width: 992px) {
             width: 100%;
-        }
-
-        @media (max-width: 1200px) {
-            grid-gap: 20px;
-        }
-
-        @media (max-width: 991px) {
-            width: 100%;
-            grid-column-gap: 20px;
-            grid-row-gap: 15px;
+            grid-gap: 15px 20px;
             margin-top: 27px;
         }
 
@@ -154,10 +142,16 @@
 
     &__card {
         position: relative;
-        height: 168px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        height: 168 * 100vw / 1920;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-bottom: 12 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            height: 168px;
+            padding-bottom: 0;
+        }
 
         @media (max-width: 575px) {
             height: 135px;
@@ -188,27 +182,24 @@
             }
         }
     }
+}
 
-    // .prices__card-info
-
-    &__card-info {
-        position: absolute;
-        right: 0;
-        bottom: 12px;
-        width: 185px;
+.price-card {
+    &__info {
+        position: relative;
+        width: 185 * 100vw / 1920;
         @include column;
-        justify-content: space-between;
         align-items: flex-end;
-        background: rgba(0, 0, 0, 0.74);
-        backdrop-filter: blur(5px);
-        padding: 8px 10px;
+        padding: 7.5 * 100vw / 1920 10 * 100vw / 1920;
         color: #fff;
         transition: 0.3s linear all;
 
-        @media (max-width: 991px) {
-            left: 0;
-            right: 0;
-            bottom: 0;
+        @supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
+            background: rgba(0, 0, 0, 0.74);
+            backdrop-filter: blur(5px);
+        }
+
+        @media (max-width: 992px) {
             width: 100%;
             padding: 5px;
             font-size: 14px;
@@ -219,46 +210,61 @@
             display: none;
         }
 
-        &:hover {
-            width: 100%;
-            padding-right: 67px;
+        @media (any-hover: hover) {
+            &:hover {
+                width: 100%;
+                padding-right: 67 * 100vw / 1920;
 
-            @media (max-width: 767px) {
-                padding-right: 5px;
-            }
-
-            &:before {
-                display: block;
-                right: 16px;
-                color: $accent;
-                font-size: 12px;
-
-                @media (max-width: 767px) {
-                    display: none;
+                @media(max-width: 992px) {
+                    padding-right: 0;
                 }
-            }
 
-            &:after {
-                content: '';
-                position: absolute;
-                top: 0px;
-                right: 51px;
-                bottom: 0;
-                width: 1px;
-                height: 100%;
-                background-color: $accent;
+                &:before {
+                    display: block;
+                    right: 16 * 100vw / 1920;
+                    color: $accent;
+                    font-size: 12 * 100vw / 1920;
 
-                @media (max-width: 767px) {
-                    display: none;
+                    @media (max-width: 992px) {
+                        display: none;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 51 * 100vw / 1920;
+                    bottom: 0;
+                    width: 1 * 100vw / 1920;
+                    height: 100%;
+                    background-color: $accent;
+
+                    @media (max-width: 992px) {
+                        display: none;
+                    }
                 }
             }
         }
     }
+
+    &__info-descr+&__info-descr {
+        margin-top: 4 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-top: 4px;
+        }
+    }
 }
 
-.prices-page {
+.p-prices {
+    min-height: 100vh;
     background-color: $light;
-    padding-bottom: 77px;
+    padding-bottom: 77 * 100vw / 1920;
+
+    @media(max-width: 992px) {
+        padding-bottom: 70px;
+    }
 
     @media (max-width: 575px) {
         padding-bottom: 35px;
@@ -267,7 +273,11 @@
     // .prices__title
 
     &__title {
-        margin-bottom: 65px;
+        margin-bottom: 65 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-bottom: 65px;
+        }
 
         @media (max-width: 767px) {
             margin-bottom: 30px;
@@ -277,30 +287,24 @@
     // .prices-page__content
 
     &__content {
-        max-width: 910px;
-        margin-left: 250px;
+        width: 910 * 100vw / 1920;
+        margin-left: 250 * 100vw / 1920;
 
-        @media (max-width: 1500px) {
-            padding: 0 50px;
-            max-width: 100%;
-            margin-left: 0;
-        }
-
-        @media (max-width: 1200px) {
-            padding: 0 30px;
-        }
-
-        @media (max-width: 767px) {
+        @media (max-width: 992px) {
+            width: 100%;
             padding: 0 20px;
+            margin-left: 0;
         }
     }
 
     // .prices-page__descr
 
     &__descr {
-        font-size: 30px;
-        line-height: 35px;
-        margin-bottom: 30px;
+        margin-bottom: 30 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-bottom: 30px;
+        }
 
         @media (max-width: 767px) {
             font-size: 24px;
@@ -312,9 +316,15 @@
     // .prices-page__descr-list
 
     &__descr-list {
-        font-size: 20px;
-        line-height: 23px;
-        margin-bottom: 60px;
+        font-size: 20 * 100vw / 1920;
+        line-height: 23 * 100vw / 1920;
+        margin-bottom: 60 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 60px;
+        }
 
         @media (max-width: 767px) {
             font-size: 18px;
@@ -330,9 +340,13 @@
     &__item-header {
         position: relative;
         background-color: $accent;
-        padding: 13px 20px;
+        padding: 13 * 100vw / 1920 20 * 100vw / 1920;
         font-weight: 500;
         cursor: pointer;
+
+        @media(max-width: 992px) {
+            padding: 13px 20px;
+        }
 
         @media (max-width: 767px) {
             padding-left: 15px;
@@ -348,11 +362,19 @@
             content: '';
             position: absolute;
             @include centerY;
-            right: 27px;
-            width: 12px;
-            height: 20px;
-            background-image: url('../img/icons/arrows/arrow-down.svg');
+            right: 27 * 100vw / 1920;
+            width: 12 * 100vw / 1920;
+            height: 20 * 100vw / 1920;
+            background-image: url(../img/icons/arrows/arrow-down.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
             transition: 0.5s all;
+
+            @media(max-width: 992px) {
+                right: 27px;
+                width: 12px;
+                height: 20px;
+            }
         }
     }
 
@@ -371,7 +393,11 @@
             .accordeon {
                 &__item-header:after {
                     transform: rotate(180deg);
-                    top: 15px;
+                    top: 15 * 100vw / 1920;
+
+                    @media(max-width: 992px) {
+                        top: 15px;
+                    }
                 }
 
                 &__item-content {
@@ -381,7 +407,7 @@
         }
     }
 
-    &__item + &__item {
+    &__item+&__item {
         border-top: 1px solid #9c9c9c;
     }
 }
@@ -390,13 +416,23 @@
     // .price-list__item
 
     &__item {
-        @include flex;
-        font-size: 20px;
-        line-height: 23px;
-        padding-right: 24px;
-        padding-left: 20px;
+        display: grid;
+        grid-template-columns: auto 250 * 100vw / 1920;
+        font-size: 20 * 100vw / 1920;
+        line-height: 23 * 100vw / 1920;
+        padding-right: 24 * 100vw / 1920;
+        padding-left: 20 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            grid-template-columns: auto 250px;
+            font-size: 20px;
+            line-height: 23px;
+            padding-right: 24px;
+            padding-left: 20px;
+        }
 
         @media (max-width: 575px) {
+            grid-template-columns: 55% 45%;
             font-size: 14px;
             line-height: 16px;
             padding-left: 10px;
@@ -404,8 +440,13 @@
         }
 
         span {
-            padding-top: 13px;
-            padding-bottom: 13px;
+            padding-top: 13 * 100vw / 1920;
+            padding-bottom: 13 * 100vw / 1920;
+
+            @media(max-width: 992px) {
+                padding-top: 13px;
+                padding-bottom: 13px;
+            }
 
             @media (max-width: 767px) {
                 padding-top: 10px;
@@ -414,40 +455,34 @@
         }
     }
 
-    &__item + &__item {
+    &__item+&__item {
         border-top: 1px solid #9c9c9c;
     }
 
     // .price-list__item-text
 
     &__item-text {
-        width: 662px / 910px * 100%;
-        padding-right: 30px;
+        padding-right: 30 * 100vw / 1920;
 
-        @media (max-width: 767px) {
-            width: 210px / 335px * 100%;
+        @media(max-width: 992px) {
+            padding-right: 30px;
         }
 
-        @media (max-width: 375px) {
-            width: 55%;
+        @media (max-width: 767px) {
+            padding-right: 10px;
         }
     }
 
     // .price-list__item-descr
 
     &__item-descr {
-        width: 100% - (662px / 910px * 100%);
         text-align: right;
         border-left: 1px solid #9c9c9c;
-        padding-left: 20px;
+        padding-left: 20 * 100vw / 1920;
         white-space: nowrap;
 
-        @media (max-width: 767px) {
-            width: 125px / 335px * 100%;
-        }
-
-        @media (max-width: 375px) {
-            width: 45%;
+        @media(max-width: 992px) {
+            padding-left: 20px;
         }
     }
 }

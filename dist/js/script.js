@@ -3,6 +3,7 @@ $(function () {
     $('.hamburger-btn').on('click', function() {
     $(this).toggleClass('hamburger-btn--active');
     $('.mobile-menu').toggleClass('mobile-menu--active');
+    $('body').toggleClass('_lock');
 });
 
     $('.promo-slider').slick({
@@ -24,6 +25,7 @@ $(function () {
     slidesToScroll: 1,
     prevArrow: '<button class="slider__btn projects-slider__btn projects-slider__btn--prev icon-arr-l"></button>',
     nextArrow: '<button class="slider__btn projects-slider__btn projects-slider__btn--next icon-arr-r"></button>',
+    appendArrows: $('.projects__slider-arrows'),
     variableWidth: true,
     responsive: [
         {
@@ -196,10 +198,10 @@ $('.popup__close').on('click', function() {
 
     $($(this).siblings()).removeClass('tab--active');
     $($(this).parent().siblings().children()).removeClass('tab--active');
-    $('.tabs__content').removeClass('tabs__content--active');
+    $('.tabs-content').removeClass('tabs-content--active');
 
     $(this).addClass('tab--active');
-    $($(this).attr('href')).addClass('tabs__content--active');
+    $($(this).attr('href')).addClass('tabs-content--active');
 
     $('.masters-slider').slick('setPosition');
 });

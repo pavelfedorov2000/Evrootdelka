@@ -1,113 +1,9 @@
-.services-page {
-    // .services-page__form-section
-
-    &__form-section {
-        padding-top: 47px;
-        padding-bottom: 115px;
-
-        @media (max-width: 767px) {
-            padding: 29px 0 33px;
-        }
-    }
-
-    // .services-page__form
-
-    &__form {
-        width: 730px;
-        @include column;
-        align-items: flex-end;
-
-        @media (max-width: 1600px) {
-            width: 50%;
-        }
-
-        @media (max-width: 1300px) {
-            width: 70%;
-        }
-
-        @media (max-width: 767px) {
-            width: 100%;
-            align-items: flex-start;
-        }
-    }
-
-    &__form-col {
-        @media (max-width: 767px) {
-            width: 100%;
-            padding: 0 20px;
-        }
-    }
-
-    &__form-title {
-        margin-bottom: 32px;
-
-        @media (max-width: 767px) {
-            font-size: 24px;
-            line-height: 28px;
-            margin-bottom: 20px;
-        }
-    }
-
-    // .services-page__form-input
-
-    &__form-input {
-        display: block;
-        width: 445px;
-        border: none;
-        background-color: $card-bg;
-        padding: 15px;
-        color: #c4c4c4;
-
-        @media (max-width: 767px) {
-            width: 100%;
-        }
-    }
-
-    &__form-input + &__form-input {
-        margin-top: 11px;
-    }
-
-    // .services-page__form-textarea
-
-    &__form-textarea {
-        min-height: 115px;
-    }
-
-    // .services-page__form-btn
-
-    &__form-btn {
-        width: 100%;
-        @include flex-end;
-        padding-right: 102px;
-        margin-top: 15px;
-        &:before {
-            right: 57px;
-        }
-
-        @media (max-width: 767px) {
-            width: 197px;
-            align-self: flex-end;
-            padding-right: 53px;
-            text-align: center;
-            &:before {
-                right: 20px;
-            }
-        }
-    }
-}
-
 .services {
     position: relative;
-    padding: 60px 150px 160px 150px;
+    padding: 60 * 100vw / 1920 150 * 100vw / 1920 160 * 100vw / 1920;
 
-    @media (max-width: 1600px) {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    @media (max-width: 991px) {
-        padding-left: 20px;
-        padding-right: 20px;
+    @media (max-width: 992px) {
+        padding: 50px 20px 100px;
     }
 
     @media (max-width: 575px) {
@@ -116,18 +12,17 @@
     }
 
     &__content {
-        //width: 319px * 4 + 30px * 3;
         margin: 0 auto;
-
-        @media (max-width: 1200px) {
-            width: 100%;
-        }
     }
 
     // .services__title
 
     &__title {
-        margin-bottom: 47px;
+        margin-bottom: 47 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-bottom: 30px;
+        }
 
         @media (max-width: 575px) {
             margin-bottom: 17px;
@@ -137,21 +32,14 @@
     // .sevices__cards
 
     &__cards {
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 44px;
+        grid-gap: 44 * 100vw / 1920 30 * 100vw / 1920;
 
-        @media (max-width: 1500px) {
-            grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 15px 20px;
         }
 
-        @media (max-width: 1200px) {
-            grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 20px;
-            grid-row-gap: 15px;
-        }
-
-        @media (max-width: 375px) {
+        @media (max-width: 374px) {
             grid-template-columns: 1fr;
         }
     }
@@ -159,14 +47,27 @@
     &__link {
         position: absolute;
         right: 0;
-        bottom: 63px;
-        width: 470px;
+        bottom: 63 * 100vw / 1920;
+        width: 470 * 100vw / 1920;
         @include flex-end;
-        padding-right: 103px;
+        padding-right: 103 * 100vw / 1920;
         align-self: flex-end;
+
+        @media(max-width: 992px) {
+            bottom: 0;
+            width: 50vw;
+            padding-right: 103px;
+        }
+
         &:before {
-            right: 57px;
-            font-size: 12px;
+            right: 57 * 100vw / 1920;
+            font-size: 12 * 100vw / 1920;
+
+            @media(max-width: 992px) {
+                right: 57px;
+                font-size: 12px;
+            }
+
             @media (max-width: 575px) {
                 right: 29px;
             }
@@ -174,8 +75,6 @@
 
         @media (max-width: 575px) {
             left: 0;
-            right: 0;
-            bottom: 0;
             width: 100%;
             padding-right: 64px;
         }
@@ -183,22 +82,46 @@
 }
 
 .service-card {
-    position: relative;
-    height: 148px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: 0.5s transform;
 
-    &__descr {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.74);
-        backdrop-filter: blur(5px);
-        padding: 9px 5px 9px 13px;
+    position: relative;
+    height: 148 * 100vw / 1920;
+    transition: 0.5s transform;
+    display: flex;
+    align-items: flex-end;
+
+    @media(max-width: 992px) {
+        height: 148px;
+        grid-column: span 2;
+    }
+
+    @media(max-width: 767px) {
+        grid-column: span 3;
+    }
+
+    @media(max-width: 575px) {
+        height: 135px;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+        @media(max-width: 992px) {
+            grid-column: span 3;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        padding: 9 * 100vw / 1920 5 * 100vw / 1920 9 * 100vw / 1920 13 * 100vw / 1920;
         color: #ffffff;
+
+        @supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
+            background: rgba(0, 0, 0, 0.74);
+            backdrop-filter: blur(5px);
+        }
+
+        @media(max-width: 992px) {
+            padding: 9px 5px 9px 13px;
+        }
 
         @media (max-width: 767px) {
             display: flex;
@@ -210,28 +133,169 @@
         }
 
         &:before {
-            font-size: 16px;
+            font-size: 16 * 100vw / 1920;
             color: $accent;
-            right: 13px;
+            right: 13 * 100vw / 1920;
             visibility: hidden;
             opacity: 0;
             transition: 0.3s ease;
+
+            @media(max-width: 992px) {
+                font-size: 16px;
+                right: 13px;
+            }
         }
     }
 
-    &:hover {
-        transform: scale(1.05);
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.05);
 
-        @media (max-width: 575px) {
-            transform: none;
+            .service-card__title:before {
+                visibility: visible;
+                opacity: 1;
+
+                @media (max-width: 575px) {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+
+.services-page {
+    background-color: $dark-bg;
+
+    &__title {
+        margin-bottom: 49 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-bottom: 49px;
         }
 
-        .service-card__descr:before {
-            visibility: visible;
-            opacity: 1;
-            @media (max-width: 575px) {
-                opacity: 0;
-                visibility: hidden;
+        @media (max-width: 767px) {
+            margin-bottom: 21px;
+        }
+    }
+
+    // .services-page__form-section
+
+    &__form-section {
+        background-color: #fff;
+        padding-top: 47 * 100vw / 1920;
+        padding-bottom: 115 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            padding: 29px 0 33px;
+        }
+    }
+
+    // .services-page__form
+
+    &__form {
+        width: 730 * 100vw / 1920;
+        @include column;
+        align-items: flex-end;
+
+        @media(max-width: 992px) {
+            width: 730px;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            align-items: flex-start;
+        }
+    }
+
+    &__form-body {
+        width: 445 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            width: 445px;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    &__form-title {
+        margin-bottom: 32 * 100vw / 1920;
+
+        @media (max-width: 992px) {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+    }
+
+    // .services-page__form-input
+
+    &__form-input {
+        width: 100%;
+        border: none;
+        background-color: $card-bg;
+        padding: 15 * 100vw / 1920;
+        color: #c4c4c4;
+
+        &::placeholder {
+            color: #c4c4c4;
+        }
+
+        @media(max-width: 992px) {
+            padding: 15px;
+        }
+    }
+
+    &__form-input+&__form-input {
+        margin-top: 11 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-top: 11px;
+        }
+    }
+
+    // .services-page__form-textarea
+
+    &__form-textarea {
+        min-height: 115 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            min-height: 115px;
+        }
+    }
+
+    // .services-page__form-btn
+
+    &__form-btn {
+        width: 100%;
+        @include flex-end;
+        padding-right: 102 * 100vw / 1920;
+        margin-top: 15 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-top: 15px;
+            padding-right: 102px;
+        }
+
+        &:before {
+            right: 57 * 100vw / 1920;
+
+            @media(max-width: 992px) {
+                right: 57px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            width: 197px;
+            align-self: flex-end;
+            padding-right: 53px;
+            text-align: center;
+
+            &:before {
+                right: 20px;
             }
         }
     }

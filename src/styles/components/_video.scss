@@ -1,0 +1,22 @@
+.video {
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        position: absolute;
+        @include centerY;
+        left: calc(50% - 80 * 100vw / 1920 / 2);
+        width: 80 * 100vw / 1920;
+        height: 81 * 100vw / 1920;
+        background-image: url(../img/icons/video-player.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media(max-width: 992px) {
+            width: 82px;
+            height: 82px;
+            left: calc(50% - 82px / 2);
+        }
+    }
+}

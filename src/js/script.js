@@ -8,7 +8,7 @@ $(function () {
 
     @@include('../blocks/modules/service-categories/service-categories.js')
 
-    @@include('../blocks/modules/masters/masters.js')
+    @@include('../blocks/modules/three-parts-section/masters/masters.js')
 
     @@include('../blocks/modules/works/works.js')
 

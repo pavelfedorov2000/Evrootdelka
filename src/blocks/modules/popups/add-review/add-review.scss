@@ -32,14 +32,14 @@
         }
     }
 
-    &__input + &__input {
+    &__input+&__input {
         @media (max-width: 767px) {
             margin-top: 23px;
         }
     }
 
     &__textarea {
-        padding-bottom: 112px;
+        padding-bottom: 112 * 100vw / 1920;
     }
 
     &__btn {
@@ -50,6 +50,7 @@
             color: #fff;
             margin: 0 auto;
         }
+
         &:before {
             @media (max-width: 767px) {
                 color: #fff;

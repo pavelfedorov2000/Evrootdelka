@@ -1,8 +1,13 @@
 .order-form {
-    width: 446px;
+    width: 446 * 100vw / 1920;
     background-color: $accent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 40px 44px 47px;
+    padding: 40 * 100vw / 1920 44 * 100vw / 1920 47 * 100vw / 1920;
+
+    @media(max-width: 992px) {
+        width: 446px;
+        padding: 40px 44px 47px;
+    }
 
     @media (max-width: 767px) {
         @include column;
@@ -16,7 +21,11 @@
     // .contact-form__title
 
     &__title {
-        margin-bottom: 50px;
+        margin-bottom: 50 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-bottom: 50px;
+        }
 
         @media (max-width: 767px) {
             font-size: 24px;
@@ -31,7 +40,11 @@
     // .contact-form__fields
 
     &__fields {
-        margin-bottom: 66px;
+        margin-bottom: 66 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-bottom: 66px;
+        }
 
         @media (max-width: 767px) {
             margin-bottom: 16px;
@@ -42,9 +55,13 @@
 
     &__input {
         width: 100%;
-        padding-bottom: 10px;
+        padding-bottom: 10 * 100vw / 1920;
         border-bottom: 1px solid #000;
         color: rgba(0, 0, 0, 0.64);
+
+        @media(max-width: 992px) {
+            padding-bottom: 10px;
+        }
 
         @media (max-width: 767px) {
             background-color: $card-bg;
@@ -64,8 +81,12 @@
         }
     }
 
-    &__input + &__input {
-        margin-top: 31px;
+    &__input+&__input {
+        margin-top: 31 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-top: 31px;
+        }
 
         @media (max-width: 767px) {
             margin-top: 11px;
@@ -77,9 +98,9 @@
     &__rating {
         position: relative;
         display: inline-block;
-        margin: 33px 0 27px;
+        margin: 33 * 100vw / 1920 0 27 * 100vw / 1920;
 
-        @media (max-width: 767px) {
+        @media(max-width: 992px) {
             margin: 19px 0 26px;
         }
     }
@@ -106,7 +127,11 @@
 
     &__rating-label {
         cursor: pointer;
-        margin-right: 8px;
+        margin-right: 8 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-right: 8px;
+        }
 
         svg path {
             transition: fill 0.3s ease;
@@ -116,7 +141,12 @@
     // .contact-form__textarea
 
     &__textarea {
-        min-height: 130px;
+        min-height: 130 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            min-height: 130px;
+        }
+
         @media (max-width: 767px) {
             min-height: 115px;
         }
@@ -125,20 +155,30 @@
     // .contact-form__btn
 
     &__btn {
-        width: 193px;
+        width: 193 * 100vw / 1920;
         display: flex;
         background: #000;
         color: #fff;
         margin: 0 auto;
 
+        @media(max-width: 992px) {
+            width: 193px;
+        }
+
         &:before {
             color: #fff;
-            right: 33px;
+            right: 33 * 100vw / 1920;
+
+            @media(max-width: 992px) {
+                right: 33px;
+            }
+
             @media (max-width: 767px) {
                 color: #000;
                 right: 20px;
             }
         }
+
         @media (max-width: 767px) {
             width: 200px;
             background-color: $accent;
@@ -151,15 +191,15 @@
 }
 
 .order-form__rating-label:hover,
-.order-form__rating-label:hover ~ .order-form__rating-label,
-.order-form__rating-label:checked ~ .order-form__rating-label:hover {
+.order-form__rating-label:hover~.order-form__rating-label,
+.order-form__rating-label:checked~.order-form__rating-label:hover {
     svg path {
         fill: #000;
     }
 }
 
 .order-form__rating-item:checked,
-.order-form__rating-item:checked ~ .order-form__rating-label {
+.order-form__rating-item:checked~.order-form__rating-label {
     svg path {
         fill: #000;
     }

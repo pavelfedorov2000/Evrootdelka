@@ -1,128 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../_head.html')
+@@include('../_head.html', {
+"title": "О компании"
+})
 
 <body>
 
-    <div class="page">
+    <div class="wrapper">
         @@include('../../blocks/modules/sidebar/_sidebar.html')
 
-        <section class="section about">
+        <main class="page about">
             @@include('../../blocks/modules/header/_header.html')
             @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
-            <nav class="breadcrumbs breadcrumbs--white">
-                <a class="breadcrumbs__item" href="index.html">Главная</a>
-                <a class="breadcrumbs__item" href="articles.html">
-                    О нас
+            <div class="about-promo">
+                <nav class="breadcrumbs breadcrumbs--white">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span>О нас</span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <div class="page__header about__header">
+                    <h1 class="page-title section-title">О нас</h1>
+                    <div class="title about__title">
+                        Комплексный ремонт: офисов, квартир, домов, ресторанов, магазинов, клубов
+                    </div>
+                </div>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>
+                            Evrootdelka.by - это компания специалистов, которая изменит интерьер Вашей квартиры. Мы
+                            делаем
+                            ремонт квартир "под ключ", мы не занимаемся работами, связанными с переделками чужих работ.
+                            Ремонт мы выполняем качественно и профессионально, о чем свидетельствуют отзывы наших
+                            клиентов.
+                            Для каждого заказа мы подходим индивидуально, так, чтобы на 100% раскрыть образы, и Ваши
+                            ожидания о современном ремонте.
+                        </p>
+                        <p>
+                            Наша Компания делает ставку на постоянное развитие в области новых материалов и решений,
+                            связанных с отделочными работами. Работа уже стала для нашей компании частью жизни,
+                            увлечением,
+                            образом жизни. К каждому заказу мы подходим индивидуально, стараемся всегда узнать ожидания
+                            клиентов в области ремонтов и отделки, так, чтобы каждый с удовольствием к нам возвращался,
+                            и с
+                            чистой совестью могли нас рекомендовать.
+                        </p>
+                        <p>
+                            Если вы хотите сделать капитальный ремонт старой квартиры, комнаты или сделать ремонт в
+                            новой
+                            квартире – позвоните нам и договоритесь с нами о встрече. Мы подготовим специально для Вас
+                            бесплатную консультацию, поможем в выборе подходящих материалов, необходимых для проведения
+                            работ. 
+                        </p>
+                    </div>
+                    @@include('../../blocks/modules/about/about-slider/_about-slider.html')
+                </div>
+                <a href="services.html" class="button about__btn icon-arr-r">
+                    Все услуги
                 </a>
-            </nav>
-
-            <div class="page__header about__header">
-                <h1 class="page-title section-title">О нас</h1>
-                <div class="title about__title">
-                    Комплексный ремонт: офисов, квартир, домов, ресторанов, магазинов, клубов
-                </div>
             </div>
 
-            <div class="about__content">
-                <p class="about__text">
-                    Evrootdelka.by - это компания специалистов, которая изменит интерьер Вашей квартиры. Мы делаем
-                    ремонт квартир "под ключ", мы не занимаемся работами, связанными с переделками чужих работ.
-                    Ремонт мы выполняем качественно и профессионально, о чем свидетельствуют отзывы наших клиентов.
-                    Для каждого заказа мы подходим индивидуально, так, чтобы на 100% раскрыть образы, и Ваши
-                    ожидания о современном ремонте.
-                </p>
-                <p class="about__text">
-                    Наша Компания делает ставку на постоянное развитие в области новых материалов и решений,
-                    связанных с отделочными работами. Работа уже стала для нашей компании частью жизни, увлечением,
-                    образом жизни. К каждому заказу мы подходим индивидуально, стараемся всегда узнать ожидания
-                    клиентов в области ремонтов и отделки, так, чтобы каждый с удовольствием к нам возвращался, и с
-                    чистой совестью могли нас рекомендовать.
-                </p>
-                <p class="about__text">
-                    Если вы хотите сделать капитальный ремонт старой квартиры, комнаты или сделать ремонт в новой
-                    квартире – позвоните нам и договоритесь с нами о встрече. Мы подготовим специально для Вас
-                    бесплатную консультацию, поможем в выборе подходящих материалов, необходимых для проведения
-                    работ. 
-                </p>
-                <div class="about__slider about-slider">
-                    <a href="typical.html" class="about-slider__item service-card"
-                        style="background-image: url(img/services/services_img-1.jpg);">
-                        <div class="service-card__descr icon-arr-r">Работы по гипсокартону</div>
-                    </a>
-                    <a href="typical.html" class="about-slider__item service-card"
-                        style="background-image: url(img/services/services_img-2.jpg);">
-                        <div class="service-card__descr icon-arr-r">Покраска потолка и стен</div>
-                    </a>
-                    <a href="typical.html" class="about-slider__item service-card"
-                        style="background-image: url(img/services/services_img-3.jpg);">
-                        <div class="service-card__descr icon-arr-r">Электрика</div>
-                    </a>
-                    <a href="typical.html" class="about-slider__item service-card"
-                        style="background-image: url(img/services/services_img-4.jpg);">
-                        <div class="service-card__descr icon-arr-r">Перегородки из гипсокартона</div>
-                    </a>
-                    <a href="typical.html" class="about-slider__item service-card"
-                        style="background-image: url(img/services/services_img-5.jpg);">
-                        <div class="service-card__descr icon-arr-r">Сантехника</div>
-                    </a>
-                    <a href="typical.html" class="about-slider__item service-card"
-                        style="background-image: url(img/services/services_img-6.jpg);">
-                        <div class="service-card__descr icon-arr-r">Поклейка обоев</div>
-                    </a>
-                    <a href="typical.html" class="about-slider__item service-card"
-                        style="background-image: url(img/services/services_img-7.jpg);">
-                        <div class="service-card__descr icon-arr-r">Штукатурка стен</div>
-                    </a>
-                    <a href="typical.html" class="about-slider__item service-card"
-                        style="background-image: url(img/services/services_img-8.jpg);">
-                        <div class="service-card__descr icon-arr-r">Монтаж натяжных потолков</div>
-                    </a>
-                </div>
-            </div>
+            @@include('../../blocks/modules/about/about-benefits/_about-benefits.html')
 
-            <a href="services.html" class="button about__btn icon-arr-r">
-                Все услуги
-            </a>
-
-        </section>
-
-        <section class="section about-benefits">
-            <h4 class="title about-benefits__title">Почему наша компания?</h4>
-            <ul class="list about-benefits__list">
-                <li class="list__item about-benefits__list-item">
-                    Перед заказом мы делаем бесплатную оценку – вы знаете, за что и сколько платите.
-                </li>
-                <li class="list__item about-benefits__list-item">
-                    Работу мы выполняем комплексно - от А до Я, не нужно искать несколько бригад.
-                </li>
-                <li class="list__item about-benefits__list-item">
-                    Мы следим за новыми тенденциями отделки и ремонта интерьеров.
-                </li>
-                <li class="list__item about-benefits__list-item">
-                    Мы консультируем в выборе материалов.
-                </li>
-                <li class="list__item about-benefits__list-item">
-                    Каждый заказ мы рассматриваем индивидуально.
-                </li>
-                <li class="list__item about-benefits__list-item">
-                    У нас есть опыт и профессиональные знания.
-                </li>
-                <li class="list__item about-benefits__list-item">
-                    Наш девиз - обеспечить высокое качество услуг на каждом этапе ремонта.
-                </li>
-                <li class="list__item about-benefits__list-item">
-                    При комплексных ремонтах мы предоставляем скидки. Скидка предоставляется индивидуально, в
-                    зависимости от специфики
-                    работ.
-                </li>
-                <li class="list__item about-benefits__list-item">
-                    Мы не берем авансов, оплата только за выполненную работу или поэтапно.
-                </li>
-            </ul>
-        </section>
-
-        @@include('../../blocks/modules/projects/_projects.html')
+            @@include('../../blocks/modules/projects/_projects.html')
+        </main>
 
         @@include('../../blocks/modules/footer/_footer.html')
 

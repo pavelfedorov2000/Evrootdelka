@@ -1,16 +1,31 @@
 .button {
     position: relative;
+    z-index: 100;
     background-color: $accent;
     font-weight: 300;
-    padding: 12px 25px;
+    padding: 12.5 * 100vw / 1920 25 * 100vw / 1920;
     color: #000;
-    &:before {
-        font-size: 12px;
-        transition: 0.3s all;
+
+    @media(max-width: 992px) {
+        padding: 12.5px 25px;
     }
+
+    &:before {
+        font-size: 12 * 100vw / 1920;
+        transition: 0.3s all;
+
+        @media(max-width: 992px) {
+            font-size: 12px;
+        }
+    }
+
     &:hover {
         &:before {
-            transform: translate(5px, -50%);
+            transform: translate(5 * 100vw / 1920, -50%);
+
+            @media(max-width: 992px) {
+                transform: translate(5px, -50%);
+            }
         }
     }
 }

@@ -1,13 +1,35 @@
-.page {
+@import './vars';
+@import './mixins';
+@import './fonts';
+@import './iconsfont';
+
+@import './grid';
+
+.wrapper {
     position: relative;
-    @include column;
-    align-items: flex-end;
     overflow-x: hidden;
+}
+
+.ibg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page {
+    padding-left: $sidebar;
+
+    @media(max-width: 992px) {
+        padding-left: 0;
+    }
 
     &__title {
-        margin-top: 48px;
+        margin-top: 46.5 * 100vw / 1920;
 
-        @media (max-width: 991px) {
+        @media (max-width: 992px) {
             margin-top: 40px;
         }
     }
@@ -15,61 +37,22 @@
     &__header {
         display: flex;
         align-items: center;
-        margin-top: 48px;
+        margin-top: 41 * 100vw / 1920;
 
-        @media (max-width: 991px) {
+        @media (max-width: 992px) {
             margin-top: 40px;
         }
     }
-}
 
-.section {
-    position: relative;
-    width: calc(100% - 256px);
+    .header {
+        display: none;
 
-    @media (max-width: 991px) {
-        width: 100%;
-    }
-}
-
-.grid {
-    display: grid;
-}
-
-.input {
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.video {
-    position: relative;
-    cursor: pointer;
-
-    &:before {
-        content: '';
-        position: absolute;
-        @include centerY;
-        left: calc(50% - 80px / 2);
-        width: 80px;
-        height: 81px;
-        background-image: url('../img/icons/video-player.svg');
-    }
-}
-
-.social {
-    &__link {
-        &:hover {
-            &:before {
-                color: $accent;
-            }
+        @media(max-width: 992px) {
+            display: flex;
         }
     }
 }
 
-@import '../components/buttons';
-@import '../components/titles';
-@import '../components/tabs';
-@import '../components/list';
-@import '../components/simple-rating';
-@import '../components/slider';
-@import '../components/breadcrumbs';
+$content: 100vw - $sidebar;
+
+@import '../components/components';

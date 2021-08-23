@@ -25,43 +25,37 @@
                 Прайс-лист
             </a>
         </div>
-        <div class="prices__cards grid">
-            <div class="prices__card" style="background-image: url(img/price-cards/price-card-1.jpg);">
-                <a href="prices.html" class="prices__card-info icon-arr-r">
-                    <span class="prices__card-descr">Ремонт санузлов</span>
-                    <span class="prices__card-descr">от 2 700 руб</span>
-                </a>
-            </div>
-            <div class="prices__card" style="background-image: url(img/price-cards/price-card-2.jpg);">
-                <a href="prices.html" class="prices__card-info icon-arr-r">
-                    <span class="prices__card-descr">Поклейка обоев</span>
-                    <span class="prices__card-descr">от 8,1 руб</span>
-                </a>
-            </div>
-            <div class="prices__card" style="background-image: url(img/price-cards/price-card-3.jpg);">
-                <a href="prices.html" class="prices__card-info icon-arr-r">
-                    <span class="prices__card-descr">Ремонт квартиры</span>
-                    <span class="prices__card-descr">от 450 руб</span>
-                </a>
-            </div>
-            <div class="prices__card" style="background-image: url(img/price-cards/price-card-4.jpg);">
-                <a href="prices.html" class="prices__card-info icon-arr-r">
-                    <span class="prices__card-descr">Перенос розеток</span>
-                    <span class="prices__card-descr">от 135 руб</span>
-                </a>
-            </div>
-            <div class="prices__card" style="background-image: url(img/price-cards/price-card-5.jpg);">
-                <a href="prices.html" class="prices__card-info icon-arr-r">
-                    <span class="prices__card-descr">Услуги сантехника</span>
-                    <span class="prices__card-descr">от 216 руб</span>
-                </a>
-            </div>
-            <div class="prices__card" style="background-image: url(img/price-cards/price-card-6.jpg);">
-                <a href="prices.html" class="prices__card-info icon-arr-r">
-                    <span class="prices__card-descr">Перегородки</span>
-                    <span class="prices__card-descr">от 27 руб</span>
-                </a>
-            </div>
+        <div class="prices__cards grid col-3">
+            @@include('./_price-card.html', {
+            "num": "1",
+            "title": "Ремонт санузлов",
+            "price": "от 2 700 руб",
+            })
+            @@include('./_price-card.html', {
+            "num": "2",
+            "title": "Поклейка обоев",
+            "price": "от 8,1 руб",
+            })
+            @@include('./_price-card.html', {
+            "num": "3",
+            "title": "Ремонт квартиры",
+            "price": "от 450 руб",
+            })
+            @@include('./_price-card.html', {
+            "num": "4",
+            "title": "Перенос розеток",
+            "price": "от 135 руб",
+            })
+            @@include('./_price-card.html', {
+            "num": "5",
+            "title": "Услуги сантехника",
+            "price": "от 216 руб",
+            })
+            @@include('./_price-card.html', {
+            "num": "6",
+            "title": "Перегородки",
+            "price": "от 27 руб",
+            })
         </div>
     </div>
 </section>

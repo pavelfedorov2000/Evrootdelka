@@ -2,15 +2,13 @@
     position: fixed;
     top: 40px;
     right: -100%;
-    z-index: 100;
+    z-index: 200;
     width: 100%;
-    height: 100%;
-    background: radial-gradient(
-        79.97% 294.82% at 5.18% 92.9%,
-        #000000 0%,
-        rgba(0, 0, 0, 0.757207) 64.58%,
-        rgba(0, 0, 0, 0.760938) 93.75%
-    );
+    height: calc(100vh - 40px);
+    background: radial-gradient(79.97% 294.82% at 5.18% 92.9%,
+            #000000 0%,
+            rgba(0, 0, 0, 0.757207) 64.58%,
+            rgba(0, 0, 0, 0.760938) 93.75%);
     transition: 0.5s ease;
     overflow: auto;
 
@@ -27,18 +25,13 @@
         padding-bottom: 35px;
     }
 
-    // .mobile-menu__socials
-
-    &__socials {
-        @include column;
-        align-items: center;
+    &__social {
+        flex-direction: column;
         margin-top: 56px;
-        margin-left: 46px;
+        margin-left: 46px
     }
 
-    // .mobile-menu__social-item
-
-    &__social-item + &__social-item {
+    &__social-item+&__social-item {
         margin-top: 32px;
     }
 
@@ -48,18 +41,19 @@
     }
 
     &__social-link {
-        display: block;
-        width: 100%;
-        height: 100%;
+
         &:before {
             font-size: 30px;
         }
+
         &.icon-vk {
             &:before {
                 font-size: 19px;
             }
         }
     }
+
+    // .mobile-menu__socials
 
     // .mobile-menu__contacts
 
@@ -85,7 +79,7 @@
         margin-bottom: 10px;
     }
 
-    &__contact-phone + &__contact-phone {
+    &__contact-phone+&__contact-phone {
         margin-top: 6px;
     }
 
@@ -98,7 +92,7 @@
         font-size: 14px;
         line-height: 16px;
 
-        @media (max-width: 360px) {
+        @media(max-width: 374px) {
             font-size: 12px;
             line-height: 14px;
         }
@@ -111,18 +105,18 @@
         text-align: right;
     }
 
-    &__info-item + &__info-item {
+    &__info-item+&__info-item {
         margin-top: 16px;
     }
 
     &--active {
-        @media (max-width: 991px) {
+        @media (max-width: 992px) {
             right: 0;
         }
     }
 
-    .header__menu {
-        @media (max-width: 991px) {
+    .menu {
+        @media (max-width: 992px) {
             width: 242px / 375px * 100%;
             display: flex;
             justify-content: flex-end;

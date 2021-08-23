@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('_head.html')
+@@include('./_head.html', {
+"title": "Список страниц"
+})
 
 <body>
 
-    <div class="page">
-        @@include('../blocks/modules/sidebar/_sidebar.html')
+    <ul style="margin-left: 40px;">
+        <li style="margin-top: 20px;"><a href="home.html">Главная</a></li>
+        <li style="margin-top: 20px;"><a href="services.html">Услуги</a></li>
+        <li style="margin-top: 20px;"><a href="contacts.html">Контакты</a></li>
+        <li style="margin-top: 20px;"><a href="masters.html">Мастера</a></li>
+        <li style="margin-top: 20px;"><a href="reviews.html">Отзывы</a></li>
+        <li style="margin-top: 20px;"><a href="typical.html">Типовая</a></li>
+        <li style="margin-top: 20px;"><a href="prices.html">Цены</a></li>
+        <li style="margin-top: 20px;"><a href="articles.html">Статьи</a></li>
+        <li style="margin-top: 20px;"><a href="article.html">Статья</a></li>
+        <li style="margin-top: 20px;"><a href="about.html">О нас</a></li>
+        <li style="margin-top: 20px;"><a href="projects.html">Проекты</a></li>
+    </ul>
 
-        @@include('../blocks/modules/promo/_promo.html')
-
-        @@include('../blocks/modules/services/_services.html')
-
-        @@include('../blocks/modules/projects/_projects.html')
-
-        @@include('../blocks/modules/prices/_prices.html')
-
-        @@include('../blocks/modules/masters/_masters.html')
-
-        @@include('../blocks/modules/video-reviews/_video-reviews.html')
-
-        @@include('../blocks/modules/footer/_footer.html')
-    </div>
-
-    @@include('_js.html')
+    @@include('./_js.html')
 
 </body>
 

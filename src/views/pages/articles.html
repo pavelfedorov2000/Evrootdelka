@@ -1,158 +1,173 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../_head.html')
+@@include('../_head.html', {
+"title": "Статьи"
+})
 
 <body>
 
-    <div class="page">
+    <div class="wrapper">
         @@include('../../blocks/modules/sidebar/_sidebar.html')
 
-        <section class="section articles-page">
+        <main class="page articles">
             @@include('../../blocks/modules/header/_header.html')
             @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
             <nav class="breadcrumbs">
-                <a class="breadcrumbs__item" href="index.html">Главная</a>
-                <span class="breadcrumbs__item">Полезные статьи</span>
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Полезные статьи</span>
+                    </li>
+                </ol>
             </nav>
 
-            <h1 class="page-title page__title section-title articles-page__title">Полезные статьи</h1>
+            <h1 class="page-title page__title">Полезные статьи</h1>
 
             <div class="articles__items">
-                <div class="articles__line">
-                    <article class="article-item">
-                        <a href="article.html" class="article-item__inner">
-                            <div class="article-item__content">
-                                <header class="article-item__head">
-                                    <h5 class="article-item__title">
-                                        Мох в домашнем интерьере
-                                    </h5>
-                                    <div class="date article-item__date">21 января 2018
-                                    </div>
-                                </header>
-                                <p class="article-item__text">
-                                    Декоративный мох может стать поистине необыкновенным и захватывающим дух украшением
-                                    для
-                                    интерьера. Его можно использовать как-угодно: украшать кусочками, создавая
-                                    причудливые
-                                    формы
-                                    и элементы, или же брать цельными крупными кусками...
-                                </p>
-                            </div>
-                            <img src="img/articles/article-1.jpg" alt="" class="article-item__img">
-                        </a>
-                    </article>
-                    <article class="article-item article-item--column">
-                        <a href="article.html" class="article-item__inner">
-                            <div class="article-item__content">
-                                <header class="article-item__head">
-                                    <h5 class="article-item__title">
-                                        Зачем нужны оптоволоконные системы освещения?
-                                    </h5>
-                                    <div class="date article-item__date">
-                                        19 января 2018
-                                    </div>
-                                </header>
-                                <p class="article-item__text">
-                                    С помощью оптоволоконной системы освещения можно создавать потрясающие декоративные
-                                    световые эффекты, которые не получить больше никаким образом...
-                                </p>
-                            </div>
-                            <img src="img/articles/article-2.jpg" alt="" class="article-item__img">
-                        </a>
-                    </article>
-                </div>
-                <div class="articles__line">
-                    <article class="article-item">
-                        <a href="article.html" class="article-item__inner">
-                            <div class="article-item__content">
-                                <header class="article-item__head">
-                                    <h5 class="article-item__title">
-                                        Дизайн ванной комнаты
-                                    </h5>
-                                    <div class="date article-item__date">
-                                        20 мая 2012
-                                    </div>
-                                </header>
-                                <p class="article-item__text">
-                                    У нас в стране, 4 кв. м. — самая распространенная площадь ванных комнат. -Как при
-                                    таких
-                                    размерах, разместить всё
-                                    необходимое сантехническое оборудование, и что бы при этом получилось стильно и
-                                    красиво?
-                                </p>
-                            </div>
-                            <img src="img/articles/article-3.jpg" alt="" class="article-item__img">
-                        </a>
-                    </article>
-                    <article class="article-item article-item--column">
-                        <a href="article.html" class="article-item__inner">
-                            <div class="article-item__content">
-                                <header class="article-item__head">
-                                    <h5 class="article-item__title">
-                                        Гарантии на выполненые работы
-                                    </h5>
-                                    <div class="date article-item__date">
-                                        18 ноября 2016
-                                    </div>
-                                </header>
-                                <p class="article-item__text">
-                                    На все выполненные работы мы заключаем договор и даём гарантию:
-                                    1) Малярные работы 2 года...
-                                </p>
-                            </div>
-                            <img src="img/articles/article-4.jpg" alt="" class="article-item__img">
-                        </a>
-                    </article>
-                </div>
-                <div class="articles__line">
-                    <article class="article-item">
-                        <a href="article.html" class="article-item__inner">
-                            <div class="article-item__content">
-                                <header class="article-item__head">
-                                    <h5 class="article-item__title">
-                                        Делаем ремонт в спальне
-                                    </h5>
-                                    <div class="date article-item__date">
-                                        25 ноября 2010
-                                    </div>
-                                </header>
-                                <p class="article-item__text">
-                                    Наиболее важная комната в вашем доме или квартире, в которой мы проживаем большую
-                                    часть
-                                    времени – это, конечно же,
-                                    спальня. Поэтому и состояние, меблировка и планировка спальной комнаты должна
-                                    соответствовать нашим требованиям
-                                    полностью. Ремонт спальной комнаты должен производиться гораздо чаще...
-                                </p>
-                            </div>
-                            <img src="img/articles/article-5.jpg" alt="" class="article-item__img">
-                        </a>
-                    </article>
-                    <article class="article-item article-item--column">
-                        <a href="article.html" class="article-item__inner">
-                            <div class="article-item__content">
-                                <header class="article-item__head">
-                                    <h5 class="article-item__title">
-                                        Ремонт квартиры в ожидании малыша
-                                    </h5>
-                                    <div class="date article-item__date">
-                                        12 марта 2010
-                                    </div>
-                                </header>
-                                <p class="article-item__text">
-                                    Ремонт квартир и малыши, как любят шутить многие, равносилен пожару, главным образом
-                                    потому, что всегда случается не
-                                    вовремя...
-                                </p>
-                            </div>
-                            <img src="img/articles/article-6.jpg" alt="" class="article-item__img">
-                        </a>
-                    </article>
-                </div>
+                <article class="article-item">
+                    <a href="article.html" class="article-item__inner">
+                        <div class="article-item__content">
+                            <header class="article-item__head">
+                                <h6 class="article-item__title">
+                                    Мох в домашнем интерьере
+                                </h6>
+                                <time class="date article-item__date" datetime="2018-01-21">
+                                    21 января 2018
+                                </time>
+                            </header>
+                            <p class="article-item__text">
+                                Декоративный мох может стать поистине необыкновенным и захватывающим дух украшением
+                                для
+                                интерьера. Его можно использовать как-угодно: украшать кусочками, создавая
+                                причудливые
+                                формы
+                                и элементы, или же брать цельными крупными кусками...
+                            </p>
+                        </div>
+                        <div class="article-item__img">
+                            <img src="img/articles/article-1.jpg" alt="">
+                        </div>
+                    </a>
+                </article>
+                <article class="article-item">
+                    <a href="article.html" class="article-item__inner">
+                        <div class="article-item__content">
+                            <header class="article-item__head">
+                                <h6 class="article-item__title">
+                                    Зачем нужны оптоволоконные системы освещения?
+                                </h6>
+                                <time class="date article-item__date" datetime="2018-01-19">
+                                    19 января 2018
+                                </time>
+                            </header>
+                            <p class="article-item__text">
+                                С помощью оптоволоконной системы освещения можно создавать потрясающие декоративные
+                                световые эффекты, которые не получить больше никаким образом...
+                            </p>
+                        </div>
+                        <div class="article-item__img">
+                            <img src="img/articles/article-2.jpg" alt="">
+                        </div>
+                    </a>
+                </article>
+                <article class="article-item">
+                    <a href="article.html" class="article-item__inner">
+                        <div class="article-item__content">
+                            <header class="article-item__head">
+                                <h6 class="article-item__title">
+                                    Дизайн ванной комнаты
+                                </h6>
+                                <time class="date article-item__date" datetime="2012-05-20">
+                                    20 мая 2012
+                                </time>
+                            </header>
+                            <p class="article-item__text">
+                                У нас в стране, 4 кв. м. — самая распространенная площадь ванных комнат. -Как при
+                                таких
+                                размерах, разместить всё
+                                необходимое сантехническое оборудование, и что бы при этом получилось стильно и
+                                красиво?
+                            </p>
+                        </div>
+                        <div class="article-item__img">
+                            <img src="img/articles/article-3.jpg" alt="">
+                        </div>
+                    </a>
+                </article>
+                <article class="article-item">
+                    <a href="article.html" class="article-item__inner">
+                        <div class="article-item__content">
+                            <header class="article-item__head">
+                                <h6 class="article-item__title">
+                                    Гарантии на выполненые работы
+                                </h6>
+                                <time class="date article-item__date" datetime="2016-11-18">
+                                    18 ноября 2016
+                                </time>
+                            </header>
+                            <p class="article-item__text">
+                                На все выполненные работы мы заключаем договор и даём гарантию:
+                                1) Малярные работы 2 года...
+                            </p>
+                        </div>
+                        <div class="article-item__img">
+                            <img src="img/articles/article-4.jpg" alt="">
+                        </div>
+                    </a>
+                </article>
+                <article class="article-item">
+                    <a href="article.html" class="article-item__inner">
+                        <div class="article-item__content">
+                            <header class="article-item__head">
+                                <h6 class="article-item__title">
+                                    Делаем ремонт в спальне
+                                </h6>
+                                <time class="date article-item__date" datetime="2010-11-25">
+                                    25 ноября 2010
+                                </time>
+                            </header>
+                            <p class="article-item__text">
+                                Наиболее важная комната в вашем доме или квартире, в которой мы проживаем большую
+                                часть
+                                времени – это, конечно же,
+                                спальня. Поэтому и состояние, меблировка и планировка спальной комнаты должна
+                                соответствовать нашим требованиям
+                                полностью. Ремонт спальной комнаты должен производиться гораздо чаще...
+                            </p>
+                        </div>
+                        <div class="article-item__img">
+                            <img src="img/articles/article-5.jpg" alt="">
+                        </div>
+                    </a>
+                </article>
+                <article class="article-item">
+                    <a href="article.html" class="article-item__inner">
+                        <div class="article-item__content">
+                            <header class="article-item__head">
+                                <h6 class="article-item__title">
+                                    Ремонт квартиры в ожидании малыша
+                                </h6>
+                                <time class="date article-item__date" datetime="2010-03-12">
+                                    12 марта 2010
+                                </time>
+                            </header>
+                            <p class="article-item__text">
+                                Ремонт квартир и малыши, как любят шутить многие, равносилен пожару, главным образом
+                                потому, что всегда случается не
+                                вовремя...
+                            </p>
+                        </div>
+                        <div class="article-item__img">
+                            <img src="img/articles/article-6.jpg" alt="">
+                        </div>
+                    </a>
+                </article>
             </div>
 
             @@include('../../blocks/modules/pagination/_pagination.html')
-        </section>
+        </main>
 
         @@include('../../blocks/modules/footer/_footer.html')
 

@@ -1,0 +1,65 @@
+.three-parts-section {
+    &__inner {
+        @media(min-width: 992px) {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    $right-part: 486 * 100vw / 1920;
+
+    &__left {
+        width: $content - $right-part;
+        background: radial-gradient(88.03% 247.18% at 11.97% 40.68%,
+                #4d4d4d 0%,
+                rgba(77, 77, 77, 0.81) 57.29%,
+                rgba(77, 77, 77, 0.71) 100%);
+        padding: 50* 100vw / 1920 50 * 100vw / 1920 50 * 100vw / 1920 95 * 100vw / 1920;
+        color: #fff;
+
+        @media(max-width: 992px) {
+            width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            position: relative;
+            padding: 20px 20px 66px;
+        }
+    }
+
+    &__right {
+        width: $right-part;
+
+        @media(max-width: 992px) {
+            width: 100%;
+            display: flex;
+        }
+
+        @media(max-width: 767px) {
+            flex-direction: column-reverse;
+        }
+
+        >* {
+            @media(max-width: 992px) {
+                width: 50%;
+            }
+
+            @media(max-width: 767px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__reviews {
+        background: #f2f2f2;
+        padding: 39 * 100vw / 1920 39 * 100vw / 1920 39 * 100vw / 1920 28 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            padding: 30px;
+        }
+    }
+}
+
+@import './masters/masters';
+@import './partners/partners';
+@import './reviews/reviews';

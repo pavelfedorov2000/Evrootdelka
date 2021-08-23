@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../_head.html')
+@@include('../_head.html', {
+"title": "Отзывы"
+})
 
 <body>
 
-    <div class="page">
+    <div class="wrapper">
         @@include('../../blocks/modules/sidebar/_sidebar.html')
 
-        <section class="section reviews-page">
+        <main class="page reviews-page">
             @@include('../../blocks/modules/header/_header.html')
             @@include('../../blocks/modules/mobile-menu/_mob-menu.html')
 
@@ -24,7 +26,7 @@
                     </button>
                 </div>
 
-                <div class="reviews-page__cards grid">
+                <div class="reviews-page__cards grid col-3">
                     @@include('../../blocks/modules/reviews/_review-card.html')
                     @@include('../../blocks/modules/reviews/_review-card.html')
                     @@include('../../blocks/modules/reviews/_review-card.html')
@@ -34,25 +36,6 @@
                     @@include('../../blocks/modules/reviews/_review-card.html')
                     @@include('../../blocks/modules/reviews/_review-card.html')
                     @@include('../../blocks/modules/reviews/_review-card.html')
-                </div>
-
-                <div class="reviews-page__more-cards">
-                    <div class="reviews-page__cards grid">
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                        @@include('../../blocks/modules/reviews/_review-card.html')
-                    </div>
-                </div>
-
-                <div class="button reviews-page__show-more more-reviews">
-                    Показать еще
-                    <span>Скрыть</span>
                 </div>
             </div>
 
@@ -60,7 +43,7 @@
                 @@include('../../blocks/modules/popups/add-review/_add-review.html')
                 @@include('../../blocks/modules/popups/review/_review-popup.html')
             </div>
-        </section>
+        </main>
 
         @@include('../../blocks/modules/footer/_footer.html')
     </div>

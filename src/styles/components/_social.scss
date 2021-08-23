@@ -1,0 +1,9 @@
+.social {
+    &__link {
+        &:hover {
+            &:before {
+                color: $accent;
+            }
+        }
+    }
+}

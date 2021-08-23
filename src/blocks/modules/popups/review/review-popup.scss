@@ -1,9 +1,13 @@
 .review-popup {
     display: none;
-    height: 438px;
+    //min-height: 438 * 100vw / 1920;
     overflow-y: auto;
-    padding: 23px 20px;
+    padding: 23 * 100vw / 1920 20 * 100vw / 1920;
     background-color: #fff;
+
+    @media(max-width: 992px) {
+        padding: 23px 20px;
+    }
 
     @media(max-width: 575px) {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -12,18 +16,30 @@
     // .review-popup__date
 
     &__date {
-        margin-top: 5px;
+        margin-top: 5 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-top: 5px;
+        }
     }
 
     // .review-popup__rating
 
     &__rating {
-        margin-top: 26px;
+        margin-top: 26 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            margin-top: 25px;
+        }
     }
 
     // .review-popup__text
 
     &__text {
-        margin: 22px 0 0;
+        margin: 22 * 100vw / 1920 0 0;
+
+        @media(max-width: 992px) {
+            margin-top: 22px;
+        }
     }
 }

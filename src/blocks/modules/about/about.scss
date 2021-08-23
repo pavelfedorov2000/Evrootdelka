@@ -1,34 +1,15 @@
 .about {
-    position: relative;
-    background-color: $dark-bg;
-    color: #fff;
-    padding-bottom: 63px;
-
-    &:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: -231px;
-        width: 771px;
-        height: 638px;
-        z-index: 90;
-        background-size: contain;
-        background-image: url(../img/about_bg.png);
-
-        @media (max-width: 1500px) {
-            display: none;
-        }
-    }
-
     // .about__header
 
     &__header {
-        margin-bottom: 104px;
-        padding-right: 65px;
+        margin-bottom: 104 * 100vh / 1000;
+        padding-right: 65 * 100vw / 1920;
 
-        @media (max-width: 1200px) {
+        @media (max-width: 992px) {
             flex-direction: column;
             align-items: flex-start;
+            padding-right: 20px;
+            margin-bottom: 30px;
         }
 
         @media (max-width: 767px) {
@@ -39,10 +20,11 @@
     // .about__title
 
     &__title {
-        margin-left: 77px;
+        color: #fff;
+        margin-left: 77 * 100vw / 1920;
 
-        @media (max-width: 1200px) {
-            margin-left: 30px;
+        @media (max-width: 992px) {
+            margin-left: 20px;
             margin-top: 30px;
         }
 
@@ -50,7 +32,11 @@
             font-size: 24px;
             line-height: 28px;
             margin-top: 20px;
-            margin-left: 20px;
+        }
+
+        @media(max-width: 575px) {
+            font-size: 24px;
+            line-height: 28px;
         }
     }
 
@@ -59,14 +45,9 @@
     &__content {
         position: relative;
         z-index: 100;
-        padding-left: 540px / 1666px * 100%;
+        padding-left: 540 * 100vw / 1920;
 
-        @media (max-width: 1500px) {
-            padding: 0 30px;
-            position: static;
-        }
-
-        @media (max-width: 767px) {
+        @media (max-width: 992px) {
             padding: 0 20px;
         }
     }
@@ -74,32 +55,38 @@
     // .about__text
 
     &__text {
-        max-width: 950px;
-        line-height: 26px;
+        width: 950 * 100vw / 1920;
+        line-height: 26 * 100vw / 1920;
 
-        @media (max-width: 1500px) {
-            max-width: 100%;
+        @media(max-width: 992px) {
+            width: 100%;
+            line-height: 26px;
         }
 
         @media (max-width: 767px) {
             font-size: 16px;
             line-height: 23px;
         }
-    }
 
-    &__text + &__text {
-        margin-top: 20px;
+        p+p {
+            margin-top: 20 * 100vh / 1000;
+
+            @media(max-width: 992px) {
+                margin-top: 20px;
+            }
+        }
     }
 
     // .about__slider
 
     &__slider {
         position: relative;
-        padding-bottom: 74px;
-        margin-top: 92px;
+        padding-bottom: 74 * 100vh / 1000;
+        margin-top: 92 * 100vh / 1000;
 
-        @media (max-width: 767px) {
+        @media (max-width: 992px) {
             margin-top: 22px;
+            padding-bottom: 74px;
         }
 
         @media (max-width: 575px) {
@@ -108,136 +95,66 @@
             grid-gap: 20px;
             padding-bottom: 0;
         }
+
+        @media(max-width: 374px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     // .about__btn
 
     &__btn {
         position: absolute;
-        right: 1px;
-        bottom: 52px;
-        width: 484px;
+        right: 1 * 100vw / 1920;
+        bottom: 52 * 100vh / 1000;
+        width: 484 * 100vw / 1920;
         @include flex-end;
-        padding-right: 103px;
+        padding-right: 103 * 100vw / 1920;
+
+        @media(max-width: 992px) {
+            width: 484px;
+            bottom: 52px;
+            right: 1px;
+            padding-right: 103px;
+        }
+
         &:before {
-            right: 57px;
+            right: 57 * 100vw / 1920;
+
+            @media(max-width: 992px) {
+                right: 57px;
+            }
+
             @media (max-width: 575px) {
                 right: 29px;
             }
         }
 
-        @media (max-width: 650px) {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-
         @media (max-width: 575px) {
             padding-right: 64px;
+            bottom: 0;
+            right: 0;
         }
     }
 }
 
-.about-slider {
-    // .about-slider__item
+.about-promo {
+    position: relative;
+    background-color: $dark-bg;
+    color: #fff;
+    min-height: 100vh;
+    padding-bottom: 63 * 100vh / 1000;
+    background-size: 771 * 100vh / 1000 638 * 100vh / 1000;
+    background-position: -232 * 100vh / 1000 bottom;
+    background-image: url(../img/about_bg.png);
+    background-repeat: no-repeat;
 
-    &__item {
-        width: 319px;
-        height: 148px;
-        margin-right: 20px;
-
-        @media (max-width: 575px) {
-            display: none;
-            width: auto;
-            height: 135px;
-            margin-right: 0;
-        }
-
-        &:nth-child(1),
-        &:nth-child(2) {
-            display: block;
-        }
-    }
-
-    &__btn {
-        bottom: 0;
-        left: 0;
-        @include slider-btn(38px, $accent);
-
-        &:before {
-            color: $accent;
-            font-size: 9px;
-        }
-
-        &:hover {
-            background-color: $accent;
-            border: none;
-
-            &:before {
-                color: #000;
-            }
-        }
-
-        &--next {
-            left: 11px + 38px;
-        }
+    @media(max-width: 992px) {
+        background-image: none;
+        min-height: auto;
+        padding-bottom: 66px;
     }
 }
 
-.about-benefits {
-    padding: 57px 0 75px 94px;
-
-    @media (max-width: 1500px) {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    @media (max-width: 767px) {
-        padding: 20px;
-    }
-
-    // .about-benefits__title
-
-    &__title {
-        margin-bottom: 48px;
-
-        @media (max-width: 767px) {
-            margin-bottom: 20px;
-        }
-
-        @media (max-width: 575px) {
-            font-size: 24px;
-            line-height: 28px;
-            margin-bottom: 10px;
-        }
-    }
-
-    // .about-benefits__list
-
-    &__list {
-        padding-left: 3px;
-
-        @media (max-width: 1500px) {
-            padding-left: 0;
-        }
-    }
-
-    // .about-benefits__list-item
-
-    &__list-item {
-        font-size: 20px;
-        line-height: 23px;
-
-        @media (max-width: 767px) {
-            font-size: 16px;
-            line-height: 19px;
-        }
-    }
-
-    &__list-item + &__list-item {
-        @media (max-width: 575px) {
-            margin-top: 10px;
-        }
-    }
-}
+@import './about-slider/about-slider.scss';
+@import './about-benefits/about-benefits.scss';

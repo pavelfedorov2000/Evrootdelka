@@ -1,19 +1,20 @@
 // Common
 @import "modules/sidebar/sidebar";
 @import "modules/header/header";
+@import "modules/menu/menu";
+@import "modules/socials/socials";
+@import "modules/footer/footer";
 @import "modules/hamburger/hamburger";
 @import "modules/pagination/pagination";
 @import "modules/mobile-menu/mob-menu";
 @import "modules/projects/projects";
-@import "modules/footer/footer";
 @import "modules/order-form/order-form";
 @import "modules/prices/prices";
 
 // Home-page
 @import "modules/promo/promo";
 @import "modules/services/services";
-@import "modules/masters/masters";
-@import "modules/partners/partners";
+@import "modules/three-parts-section/three-parts-section";
 @import "modules/video-reviews/video-reviews";
 
 
@@ -33,6 +34,7 @@
 
 // Articles-page, Article-page
 @import "modules/articles/articles";
+@import "modules/article/article";
 
 // About-page
 @import "modules/about/about";

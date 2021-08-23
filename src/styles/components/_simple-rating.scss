@@ -2,14 +2,19 @@
 
     &__item {
         display: inline-block;
-        width: 18px;
-        height: 18px;
-        background-image: url("../img/icons/star.svg");
+        width: 18 * 100vw / 1920;
+        height: 18 * 100vw / 1920;
+        background-image: url(../img/icons/star.svg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
 
-        @media (max-width:575px) {
+        @media(max-width: 992px) {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 575px) {
             width: 12px;
             height: 12px;
         }
